@@ -1,0 +1,90 @@
+"use strict";
+
+/*
+*
+* ============================
+* ============================
+*
+* Include lib:
+*
+* - preventBehavior.js;
+*
+* ============================
+* ============================
+* */
+
+/**
+ * @name initPreventBehavior
+ *
+ * @description
+ */
+var initPreventBehavior = function initPreventBehavior() {
+
+		var link = document.querySelectorAll("a");
+
+		link.forEach(function (val, idx) {
+
+				val.addEventListener("click", function (e) {
+						if (val.getAttribute("href") === "#") {
+								e.preventDefault();
+						}
+				});
+		});
+};
+
+/**
+ * @name initSwiper
+ *
+ * @description initialize Swiper
+ */
+var initSwiper = function initSwiper() {
+
+		var footerSwiper = new Swiper('.footerSwiper', {
+				loop: true,
+				grabCursor: true,
+				effect: 'coverflow',
+				coverflowEffect: {
+						rotate: 30,
+						slideShadows: false
+				},
+				speed: 850,
+				autoplay: {
+						delay: 5000,
+						disableOnInteraction: false
+				},
+				slidesPerView: 1,
+				spaceBetween: 50
+		});
+};
+
+(function () {
+		/*
+  * CALLBACK :: start
+  * ============================================= */
+
+		/*
+  * CALLBACK :: end
+  * ============================================= */
+
+		/**
+   * @name initNative
+   *
+   * @description Init all method
+   */
+		var initNative = function initNative() {
+				// default
+				initPreventBehavior();
+				// ==========================================
+
+				// lib
+				initSwiper();
+				// ==========================================
+
+				// callback
+				// ==========================================
+		};
+
+		window.addEventListener('load', function (ev) {
+				initNative();
+		}, false);
+})();

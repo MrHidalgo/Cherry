@@ -1,0 +1,130 @@
+// FOOTER :: START
+
+.footer {
+	padding-top: 300px;
+	padding-bottom: 50px;
+	background-color: #ffffff;
+
+	&__wrapper {
+		&-1 {
+			padding-bottom: 150px;
+		}
+
+		&-2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			> div {
+				&:nth-of-type(1) {
+					padding-right: 30px;
+				}
+				&:nth-of-type(2) {
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+
+	&__slider {
+		width: 100%;
+		max-width: 768px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__title {
+		width: 100%;
+		font-size: 50px;
+		line-height: 1.6;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 200px;
+
+		input,
+		button {
+			outline: none;
+			position: relative;
+		}
+
+		input {
+			width: 100%;
+			max-width: 500px;
+			height: 56px;
+			padding: 0 20px;
+			margin-right: 10px;
+			border-width: 1px;
+			border-color: rgb(0, 0, 0);
+			border-style: solid;
+			border-radius: 5px;
+			background-color: rgb(249, 245, 249);
+			font-size: 20px;
+			font-weight: 500;
+			@include inputPlaceholder {
+				font-size: 20px;
+				font-weight: 500;
+			}
+		}
+
+		button {
+			cursor: pointer;
+			overflow: hidden;
+			width: 100%;
+			max-width: 270px;
+			height: 56px;
+			margin-left: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: rgb(248, 115, 7);
+			box-shadow: 0 3px 0 0 rgba(#000, 0);
+			@include transition(box-shadow, transform);
+
+			&:before,
+			&:after {
+				content: '';
+				z-index: 0;
+				position: absolute;
+				top: 0;
+				width: 0;
+				height: 100%;
+				background-color: darken(rgb(248, 115, 7), 2%);
+				@include transition(width);
+			}
+
+			&:before {
+				left: 50%;
+			}
+			&:after {
+				right: 50%;
+			}
+
+			&:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 3px 0 0 rgba(#000, 0.15);
+				@include transition(box-shadow, transform);
+
+				&:before,
+				&:after {
+					width: 50%;
+					@include transition(width);
+				}
+			}
+
+			span {
+				z-index: 2;
+				position: relative;
+				color: #ffffff;
+				font-size: 20px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+// FOOTER :: END
