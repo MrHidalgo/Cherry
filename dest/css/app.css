@@ -608,6 +608,89 @@ picture {
   padding-bottom: 30px;
 }
 
+/* line 3, src/scss/_components/_details.scss */
+.details {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* line 7, src/scss/_components/_details.scss */
+.details__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 11, src/scss/_components/_details.scss */
+.details__wrapper-left, .details__wrapper-right {
+  width: 50%;
+}
+
+/* line 16, src/scss/_components/_details.scss */
+.details__wrapper-left {
+  padding-right: 50px;
+}
+
+/* line 20, src/scss/_components/_details.scss */
+.details__wrapper-right {
+  padding-left: 50px;
+}
+
+/* line 25, src/scss/_components/_details.scss */
+.details__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border-left: 2px solid #b6b2b2;
+}
+
+/* line 33, src/scss/_components/_details.scss */
+.details__list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 37, src/scss/_components/_details.scss */
+.details__list-item:not(:last-of-type) {
+  padding-bottom: 20px;
+}
+
+/* line 42, src/scss/_components/_details.scss */
+.details__list-title {
+  padding-bottom: 5px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #01084c;
+}
+
+/* line 49, src/scss/_components/_details.scss */
+.details__list-desc {
+  line-height: 1.8;
+  font-size: 20px;
+  color: #01084c;
+}
+
 /* line 3, src/scss/_components/_payments.scss */
 .payments {
   padding-top: 100px;
