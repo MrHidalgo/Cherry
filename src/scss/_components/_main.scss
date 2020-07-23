@@ -1,0 +1,56 @@
+// SECTION :: START
+
+.main {
+	&__wrapper {
+		display: flex;
+		min-height: 700px;
+
+		&-left,
+		&-right {
+			min-height: 100%;
+		}
+
+		&-left {
+			width: 100%;
+			max-width: 570px;
+			background-image: linear-gradient(-40deg, rgb(200,232,240) 0%, rgb(136,226,249) 100%);
+		}
+
+		&-right {
+			display: flex;
+			align-items: center;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+
+			> div {
+				width: 100%;
+				padding-left: 100px;
+			}
+		}
+	}
+
+	&__title {
+		padding-bottom: 15px;
+		text-align: left;
+	}
+
+	&__desc {
+		padding-bottom: 75px;
+		font-size: 22px;
+		color: #000000;
+	}
+
+	&__info {
+		color: #000000;
+		font-size: 14px;
+	}
+
+	.footer__form {
+		justify-content: flex-start;
+		padding-top: 0;
+		padding-bottom: 30px;
+	}
+}
+
+// SECTION :: END
