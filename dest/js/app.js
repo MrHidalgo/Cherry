@@ -14,6 +14,23 @@
 * */
 
 /**
+ * @name initHeaderFixed
+ *
+ * @description Fixing the site header in the scrolling page.
+ */
+var initHeaderFixed = function initHeaderFixed() {
+
+	var countScroll = $(window).scrollTop(),
+	    headerElement = $('.header');
+
+	if (countScroll > 10) {
+		headerElement.addClass("header--fixed");
+	} else {
+		headerElement.removeClass("header--fixed");
+	}
+};
+
+/**
  * @name initPreventBehavior
  *
  * @description
@@ -56,6 +73,25 @@ var initSwiper = function initSwiper() {
 		spaceBetween: 50
 	});
 };
+
+/**
+ * @description Window on load.
+ */
+window.addEventListener('load', function (ev) {
+	initHeaderFixed();
+});
+
+/**
+ * @description Window on resize.
+ */
+window.addEventListener('resize', function (ev) {});
+
+/**
+ * @description Window on scroll.
+ */
+window.addEventListener('scroll', function (ev) {
+	initHeaderFixed();
+});
 
 (function () {
 	/*

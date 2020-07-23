@@ -1,5 +1,67 @@
 // HEADER :: START
 
-.header {}
+.header {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-shadow: 0 2px 5px 0 rgba(#000, 0);
+	background-color: transparent;
+	@include transition(box-shadow, background-color);
+
+	&.header--fixed {
+		box-shadow: 0 2px 5px 0 rgba(#000, 0.15);
+		background-color: rgba(#fff, 0.975);
+		@include transition(box-shadow, background-color);
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 80px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+
+		&-link {
+			position: relative;
+			display: flex;
+			align-items: center;
+			color: #000;
+			font-size: 18px;
+
+			&:not(:last-of-type) {
+				margin-right: 30px;
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 100%;
+				width: 0;
+				height: 1px;
+				background-color: #000000;
+				@include transition(width);
+			}
+			&:before {left: 50%;}
+			&:after {right: 50%;}
+
+			&:hover {
+				&:before,
+				&:after {
+					width: 50%;
+					@include transition(width);
+				}
+			}
+		}
+	}
+}
 
 // HEADER :: END

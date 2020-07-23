@@ -181,12 +181,151 @@ picture {
   font-size: 14px;
 }
 
+/* line 3, src/scss/_macros/_logotype.scss */
+.logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 6, src/scss/_macros/_logotype.scss */
+.logo__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 125px;
+}
+
+/* line 12, src/scss/_macros/_logotype.scss */
+.logo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* line 3, src/scss/_macros/_title.scss */
 .c-title {
   font-size: 50px;
   line-height: 1.6;
   font-weight: bold;
   text-align: center;
+}
+
+/* line 3, src/scss/_components/_header.scss */
+.header {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 13, src/scss/_components/_header.scss */
+.header.header--fixed {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.975);
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 19, src/scss/_components/_header.scss */
+.header__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* line 28, src/scss/_components/_header.scss */
+.header__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 32, src/scss/_components/_header.scss */
+.header__nav-link {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-size: 18px;
+}
+
+/* line 39, src/scss/_components/_header.scss */
+.header__nav-link:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+/* line 43, src/scss/_components/_header.scss */
+.header__nav-link:before, .header__nav-link:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 53, src/scss/_components/_header.scss */
+.header__nav-link:before {
+  left: 50%;
+}
+
+/* line 54, src/scss/_components/_header.scss */
+.header__nav-link:after {
+  right: 50%;
+}
+
+/* line 57, src/scss/_components/_header.scss */
+.header__nav-link:hover:before, .header__nav-link:hover:after {
+  width: 50%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 /* line 3, src/scss/_components/_footer.scss */
