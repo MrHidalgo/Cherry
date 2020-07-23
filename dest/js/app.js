@@ -20,16 +20,16 @@
  */
 var initPreventBehavior = function initPreventBehavior() {
 
-		var link = document.querySelectorAll("a");
+	var link = document.querySelectorAll("a");
 
-		link.forEach(function (val, idx) {
+	link.forEach(function (val, idx) {
 
-				val.addEventListener("click", function (e) {
-						if (val.getAttribute("href") === "#") {
-								e.preventDefault();
-						}
-				});
+		val.addEventListener("click", function (e) {
+			if (val.getAttribute("href") === "#") {
+				e.preventDefault();
+			}
 		});
+	});
 };
 
 /**
@@ -39,52 +39,75 @@ var initPreventBehavior = function initPreventBehavior() {
  */
 var initSwiper = function initSwiper() {
 
-		var footerSwiper = new Swiper('.footerSwiper', {
-				loop: true,
-				grabCursor: true,
-				effect: 'coverflow',
-				coverflowEffect: {
-						rotate: 30,
-						slideShadows: false
-				},
-				speed: 850,
-				autoplay: {
-						delay: 5000,
-						disableOnInteraction: false
-				},
-				slidesPerView: 1,
-				spaceBetween: 50
-		});
+	var footerSwiper = new Swiper('.footerSwiper', {
+		loop: true,
+		grabCursor: true,
+		effect: 'coverflow',
+		coverflowEffect: {
+			rotate: 30,
+			slideShadows: false
+		},
+		speed: 850,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
+		slidesPerView: 1,
+		spaceBetween: 50
+	});
 };
 
 (function () {
-		/*
-  * CALLBACK :: start
-  * ============================================= */
+	/*
+ * CALLBACK :: start
+ * ============================================= */
+	var paymentsRandomView = function paymentsRandomView() {
+		function randowView(setTimeVal) {
+			var _num1 = Math.floor(Math.random() * 10),
+			    _num2 = Math.floor(Math.random() * 10),
+			    _num3 = Math.floor(Math.random() * 10);
 
-		/*
-  * CALLBACK :: end
-  * ============================================= */
+			var paymentsImg = $('.payments__logo img');
 
-		/**
-   * @name initNative
-   *
-   * @description Init all method
-   */
-		var initNative = function initNative() {
-				// default
-				initPreventBehavior();
-				// ==========================================
+			$(paymentsImg[_num1]).fadeIn(750);
+			$(paymentsImg[_num2]).fadeIn(750);
+			$(paymentsImg[_num3]).fadeIn(750);
 
-				// lib
-				initSwiper();
-				// ==========================================
+			setTimeout(function () {
+				$('.payments__logo img').fadeOut(750);
+			}, setTimeVal);
+		}
 
-				// callback
-				// ==========================================
-		};
+		randowView(4000);
 
-		window.addEventListener('load', function (ev) {
-				initNative();
-		}, false);
+		var timerId = setInterval(function () {
+			randowView(3500);
+		}, 5500);
+	};
+	/*
+ * CALLBACK :: end
+ * ============================================= */
+
+	/**
+  * @name initNative
+  *
+  * @description Init all method
+  */
+	var initNative = function initNative() {
+		// default
+		initPreventBehavior();
+		// ==========================================
+
+		// lib
+		initSwiper();
+		// ==========================================
+
+		// callback
+		paymentsRandomView();
+		// ==========================================
+	};
+
+	window.addEventListener('load', function (ev) {
+		initNative();
+	}, false);
 })();
