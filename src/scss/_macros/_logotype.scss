@@ -3,6 +3,10 @@
 .logo {
 	display: flex;
 
+	&.logo--popup {
+		max-width: 50px;
+	}
+
 	&__btn {
 		display: flex;
 		align-items: flex-start;
