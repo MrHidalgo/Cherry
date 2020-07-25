@@ -2,19 +2,13 @@
 
 .header {
 	z-index: 1000;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	box-shadow: 0 2px 5px 0 rgba(#000, 0);
 	background-color: transparent;
 	@include transition(box-shadow, background-color);
-
-	&.header--fixed {
-		box-shadow: 0 2px 5px 0 rgba(#000, 0.15);
-		background-color: rgba(#fff, 0.975);
-		@include transition(box-shadow, background-color);
-	}
 
 	&__wrapper {
 		display: flex;

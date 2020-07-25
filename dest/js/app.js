@@ -14,23 +14,6 @@
 * */
 
 /**
- * @name initHeaderFixed
- *
- * @description Fixing the site header in the scrolling page.
- */
-var initHeaderFixed = function initHeaderFixed() {
-
-	var countScroll = $(window).scrollTop(),
-	    headerElement = $('.header');
-
-	if (countScroll > 10) {
-		headerElement.addClass("header--fixed");
-	} else {
-		headerElement.removeClass("header--fixed");
-	}
-};
-
-/**
  * @name initPreventBehavior
  *
  * @description
@@ -74,44 +57,27 @@ var initSwiper = function initSwiper() {
 	});
 };
 
-/**
- * @description Window on load.
- */
-window.addEventListener('load', function (ev) {
-	initHeaderFixed();
-});
-
-/**
- * @description Window on resize.
- */
-window.addEventListener('resize', function (ev) {});
-
-/**
- * @description Window on scroll.
- */
-window.addEventListener('scroll', function (ev) {
-	initHeaderFixed();
-});
-
 (function () {
 	/*
  * CALLBACK :: start
  * ============================================= */
 	var paymentsRandomView = function paymentsRandomView() {
 		function randowView(setTimeVal) {
-			var _num1 = Math.floor(Math.random() * 10),
-			    _num2 = Math.floor(Math.random() * 10),
-			    _num3 = Math.floor(Math.random() * 10);
-
-			var paymentsImg = $('.payments__logo img');
-
-			$(paymentsImg[_num1]).fadeIn(750);
-			$(paymentsImg[_num2]).fadeIn(750);
-			$(paymentsImg[_num3]).fadeIn(750);
-
 			setTimeout(function () {
-				$('.payments__logo img').fadeOut(750);
-			}, setTimeVal);
+				var _num1 = Math.floor(Math.random() * 10),
+				    _num2 = Math.floor(Math.random() * 10),
+				    _num3 = Math.floor(Math.random() * 10);
+
+				var paymentsImg = $('.payments__logo img');
+
+				$(paymentsImg[_num1]).fadeIn(750);
+				$(paymentsImg[_num2]).fadeIn(750);
+				$(paymentsImg[_num3]).fadeIn(750);
+
+				setTimeout(function () {
+					$('.payments__logo img').fadeOut(750);
+				}, setTimeVal);
+			}, 100);
 		}
 
 		randowView(4000);
@@ -139,7 +105,7 @@ window.addEventListener('scroll', function (ev) {
 		// ==========================================
 
 		// callback
-		paymentsRandomView();
+		// paymentsRandomView();
 		// ==========================================
 	};
 

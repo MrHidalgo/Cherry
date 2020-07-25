@@ -4,19 +4,21 @@
 	* ============================================= */
 	const paymentsRandomView = () => {
 		function randowView(setTimeVal) {
-			const _num1 = Math.floor(Math.random() * 10),
-				_num2 = Math.floor(Math.random() * 10),
-				_num3 = Math.floor(Math.random() * 10);
-
-			const paymentsImg = $('.payments__logo img');
-
-			$(paymentsImg[_num1]).fadeIn(750);
-			$(paymentsImg[_num2]).fadeIn(750);
-			$(paymentsImg[_num3]).fadeIn(750);
-
 			setTimeout(() => {
-				$('.payments__logo img').fadeOut(750);
-			}, setTimeVal);
+				const _num1 = Math.floor(Math.random() * 10),
+					_num2 = Math.floor(Math.random() * 10),
+					_num3 = Math.floor(Math.random() * 10);
+
+				const paymentsImg = $('.payments__logo img');
+
+				$(paymentsImg[_num1]).fadeIn(750);
+				$(paymentsImg[_num2]).fadeIn(750);
+				$(paymentsImg[_num3]).fadeIn(750);
+
+				setTimeout(() => {
+					$('.payments__logo img').fadeOut(750);
+				}, setTimeVal);
+			}, 100);
 		}
 
 		randowView(4000);
@@ -46,7 +48,7 @@
 		// ==========================================
 
 		// callback
-		paymentsRandomView();
+		// paymentsRandomView();
 		// ==========================================
 	};
 

@@ -211,8 +211,7 @@ picture {
 
 /* line 3, src/scss/_macros/_title.scss */
 .c-title {
-  font-size: 50px;
-  line-height: 1.6;
+  font-size: 47px;
   font-weight: bold;
   text-align: center;
 }
@@ -220,7 +219,7 @@ picture {
 /* line 3, src/scss/_components/_header.scss */
 .header {
   z-index: 1000;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -235,18 +234,6 @@ picture {
 }
 
 /* line 13, src/scss/_components/_header.scss */
-.header.header--fixed {
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-  background-color: rgba(255, 255, 255, 0.975);
-  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-}
-
-/* line 19, src/scss/_components/_header.scss */
 .header__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -265,7 +252,7 @@ picture {
   padding-right: 50px;
 }
 
-/* line 28, src/scss/_components/_header.scss */
+/* line 22, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -277,7 +264,7 @@ picture {
           align-items: center;
 }
 
-/* line 32, src/scss/_components/_header.scss */
+/* line 26, src/scss/_components/_header.scss */
 .header__nav-link {
   position: relative;
   display: -webkit-box;
@@ -292,12 +279,12 @@ picture {
   font-size: 18px;
 }
 
-/* line 39, src/scss/_components/_header.scss */
+/* line 33, src/scss/_components/_header.scss */
 .header__nav-link:not(:last-of-type) {
   margin-right: 30px;
 }
 
-/* line 43, src/scss/_components/_header.scss */
+/* line 37, src/scss/_components/_header.scss */
 .header__nav-link:before, .header__nav-link:after {
   content: '';
   position: absolute;
@@ -310,17 +297,17 @@ picture {
   transition: width 0.3s ease-in-out;
 }
 
-/* line 53, src/scss/_components/_header.scss */
+/* line 47, src/scss/_components/_header.scss */
 .header__nav-link:before {
   left: 50%;
 }
 
-/* line 54, src/scss/_components/_header.scss */
+/* line 48, src/scss/_components/_header.scss */
 .header__nav-link:after {
   right: 50%;
 }
 
-/* line 57, src/scss/_components/_header.scss */
+/* line 51, src/scss/_components/_header.scss */
 .header__nav-link:hover:before, .header__nav-link:hover:after {
   width: 50%;
   -webkit-transition: width 0.3s ease-in-out;
@@ -330,7 +317,7 @@ picture {
 
 /* line 3, src/scss/_components/_footer.scss */
 .footer {
-  padding-top: 300px;
+  padding-top: 200px;
   padding-bottom: 20px;
   background-color: #ffffff;
 }
@@ -343,7 +330,7 @@ picture {
 
 /* line 12, src/scss/_components/_footer.scss */
 .footer__wrapper-1 {
-  padding-bottom: 150px;
+  padding-bottom: 125px;
 }
 
 /* line 16, src/scss/_components/_footer.scss */
@@ -399,17 +386,21 @@ picture {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 200px;
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
 }
 
-/* line 49, src/scss/_components/_footer.scss */
+/* line 53, src/scss/_components/_footer.scss */
 .footer__form input,
 .footer__form button {
   outline: none;
   position: relative;
 }
 
-/* line 55, src/scss/_components/_footer.scss */
+/* line 59, src/scss/_components/_footer.scss */
 .footer__form input {
   width: 100%;
   max-width: 500px;
@@ -456,12 +447,12 @@ picture {
   font-weight: 500;
 }
 
-/* line 74, src/scss/_components/_footer.scss */
+/* line 78, src/scss/_components/_footer.scss */
 .footer__form button {
   cursor: pointer;
   overflow: hidden;
   width: 100%;
-  max-width: 270px;
+  max-width: 230px;
   height: 56px;
   margin-left: 10px;
   border: none;
@@ -477,7 +468,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 87, src/scss/_components/_footer.scss */
+/* line 91, src/scss/_components/_footer.scss */
 .footer__form button:before, .footer__form button:after {
   content: '';
   z-index: 0;
@@ -491,17 +482,17 @@ picture {
   transition: width 0.3s ease-in-out;
 }
 
-/* line 99, src/scss/_components/_footer.scss */
+/* line 103, src/scss/_components/_footer.scss */
 .footer__form button:before {
   left: 50%;
 }
 
-/* line 102, src/scss/_components/_footer.scss */
+/* line 106, src/scss/_components/_footer.scss */
 .footer__form button:after {
   right: 50%;
 }
 
-/* line 106, src/scss/_components/_footer.scss */
+/* line 110, src/scss/_components/_footer.scss */
 .footer__form button:hover {
   -webkit-transform: translateY(-3px);
       -ms-transform: translateY(-3px);
@@ -515,7 +506,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 111, src/scss/_components/_footer.scss */
+/* line 115, src/scss/_components/_footer.scss */
 .footer__form button:hover:before, .footer__form button:hover:after {
   width: 50%;
   -webkit-transition: width 0.3s ease-in-out;
@@ -523,7 +514,7 @@ picture {
   transition: width 0.3s ease-in-out;
 }
 
-/* line 118, src/scss/_components/_footer.scss */
+/* line 122, src/scss/_components/_footer.scss */
 .footer__form button span {
   z-index: 2;
   position: relative;
@@ -549,7 +540,7 @@ picture {
 /* line 13, src/scss/_components/_main.scss */
 .main__wrapper-left {
   width: 100%;
-  max-width: 570px;
+  max-width: 692px;
   background-image: -webkit-linear-gradient(130deg, #c8e8f0 0%, #88e2f9 100%);
   background-image: -o-linear-gradient(130deg, #c8e8f0 0%, #88e2f9 100%);
   background-image: linear-gradient(-40deg, #c8e8f0 0%, #88e2f9 100%);
@@ -571,47 +562,54 @@ picture {
           flex: 1;
   min-width: 1px;
   max-width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
-/* line 26, src/scss/_components/_main.scss */
+/* line 28, src/scss/_components/_main.scss */
 .main__wrapper-right > div {
   width: 100%;
-  padding-left: 100px;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* line 33, src/scss/_components/_main.scss */
+/* line 37, src/scss/_components/_main.scss */
 .main__title {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  line-height: 1.2;
+  font-size: 55px;
   text-align: left;
 }
 
-/* line 38, src/scss/_components/_main.scss */
+/* line 44, src/scss/_components/_main.scss */
 .main__desc {
-  padding-bottom: 75px;
-  font-size: 22px;
+  padding-bottom: 40px;
+  font-size: 20px;
   color: #000000;
 }
 
-/* line 44, src/scss/_components/_main.scss */
+/* line 50, src/scss/_components/_main.scss */
 .main__info {
   color: #000000;
   font-size: 14px;
 }
 
-/* line 49, src/scss/_components/_main.scss */
+/* line 55, src/scss/_components/_main.scss */
 .main .footer__form {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-left: 0;
   padding-top: 0;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 /* line 3, src/scss/_components/_details.scss */
 .details {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 150px;
+  padding-bottom: 50px;
 }
 
 /* line 7, src/scss/_components/_details.scss */
@@ -752,7 +750,6 @@ picture {
 
 /* line 42, src/scss/_components/_payments.scss */
 .payments__logo-img {
-  display: none;
   position: absolute;
   max-width: 125px;
   height: auto;

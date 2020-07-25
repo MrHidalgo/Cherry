@@ -1,7 +1,7 @@
 // FOOTER :: START
 
 .footer {
-	padding-top: 300px;
+	padding-top: 200px;
 	padding-bottom: 20px;
 	background-color: #ffffff;
 
@@ -10,7 +10,7 @@
 		padding-right: 20px;
 
 		&-1 {
-			padding-bottom: 150px;
+			padding-bottom: 125px;
 		}
 
 		&-2 {
@@ -44,7 +44,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-top: 200px;
+		width: 100%;
+		max-width: 620px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 150px;
 
 		input,
 		button {
@@ -75,7 +79,7 @@
 			cursor: pointer;
 			overflow: hidden;
 			width: 100%;
-			max-width: 270px;
+			max-width: 230px;
 			height: 56px;
 			margin-left: 10px;
 			border: none;

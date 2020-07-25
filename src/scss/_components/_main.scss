@@ -12,7 +12,7 @@
 
 		&-left {
 			width: 100%;
-			max-width: 570px;
+			max-width: 692px;
 			background-image: linear-gradient(-40deg, rgb(200,232,240) 0%, rgb(136,226,249) 100%);
 		}
 
@@ -22,22 +22,28 @@
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
 
 			> div {
 				width: 100%;
-				padding-left: 100px;
+				max-width: 768px;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
 
 	&__title {
-		padding-bottom: 15px;
+		padding-bottom: 20px;
+		line-height: 1.2;
+		font-size: 55px;
 		text-align: left;
 	}
 
 	&__desc {
-		padding-bottom: 75px;
-		font-size: 22px;
+		padding-bottom: 40px;
+		font-size: 20px;
 		color: #000000;
 	}
 
@@ -48,8 +54,9 @@
 
 	.footer__form {
 		justify-content: flex-start;
+		margin-left: 0;
 		padding-top: 0;
-		padding-bottom: 30px;
+		padding-bottom: 40px;
 	}
 }
 
