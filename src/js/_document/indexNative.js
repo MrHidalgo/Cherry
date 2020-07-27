@@ -49,19 +49,25 @@
 				.to('.details__popup-progress', 2, {scaleX: 1, ease: Power2.easeInOut}, '+=0.15')
 				.to('.details__popup-desc-1', 1, {opacity: 1, ease: Power2.easeInOut}, '-=1.85')
 				.to('.details__popup-desc-2', 1, {opacity: 1, ease: Power2.easeInOut}, '-=1.25')
-				.to('.details__popup-1', 1, {opacity: 0, ease: Power2.easeInOut})
+				.to('.details__popup-1', 1, {opacity: 0, ease: Power2.easeInOut}, '+=1')
 			;
 		};
 		const animationPopup2 = () => {
 			popupTL2
 				.to('.details__popup-2', 1, {opacity: 1, ease: Power2.easeInOut}, '-=1')
-				.to('.details__popup-2', 1, {opacity: 0, ease: Power2.easeInOut}, '+=5');
+				.to('.details__popup-2', 1, {opacity: 0, ease: Power2.easeInOut}, '+=4');
 		};
 		function completedAnimation1() {
 			popupTL2.restart().play();
 		}
 		function completedAnimation2() {
-			popupTL1.restart();
+			$('.details__animation-bg').removeClass('bounceInLeft').addClass('fadeOut');
+
+			setTimeout(() => {
+				$('.details__animation-bg').removeClass('fadeOut');
+
+				AOS.refreshHard();
+			}, 500);
 		}
 
 		animationPopup1();
@@ -69,18 +75,20 @@
 
 		AOS.init({
 			offset: 200,
-			delay: 0,
+			delay: 50,
 			duration: 500,
 			easing: 'ease-in-out',
-			once: false,
-			mirror: true,
+			once: true,
+			mirror: false,
 			useClassNames: true,
 			initClassName: false,
 			animatedClassName: 'animated',
 		});
 
 		document.querySelector('.details__animation-bg').addEventListener('animationend', (ev) => {
-			popupTL1.restart().play();
+			setTimeout(() => {
+				popupTL1.restart().play();
+			}, 500);
 		});
 
 		document.addEventListener('aos:out', () => {
@@ -91,10 +99,10 @@
 
 
 	const initPathFloatingAnimation = () => {
-		let xMin = -15,
-			xMax = 15,
-			yMin = -15,
-			yMax = 15,
+		let xMin = -2,
+			xMax = 30,
+			yMin = 0,
+			yMax = 5,
 			positionsPerElement = 5,
 			secondsPerIteration = 4,
 			elements = $("[floating-node-js]");

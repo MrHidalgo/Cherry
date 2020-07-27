@@ -14,9 +14,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		height: 80px;
-		padding-left: 50px;
-		padding-right: 50px;
+		height: 140px;
+		padding-left: 73px;
+		padding-right: 73px;
 	}
 
 	&__nav {
@@ -28,7 +28,7 @@
 			display: flex;
 			align-items: center;
 			color: #000;
-			font-size: 18px;
+			font-size: 21px;
 
 			&:not(:last-of-type) {
 				margin-right: 30px;

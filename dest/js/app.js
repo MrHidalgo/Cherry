@@ -101,16 +101,22 @@ var initSwiper = function initSwiper() {
 			popupTL1.set('.details__popup-desc-1, .details__popup-desc-2', { opacity: 0 });
 			popupTL1.set('.details__popup-progress', { scaleX: 0, transformOrigin: 'left 0' });
 
-			popupTL1.to('.details__popup-1', 1, { opacity: 1, ease: Power2.easeInOut }).to('.details__popup-progress', 2, { scaleX: 1, ease: Power2.easeInOut }, '+=0.15').to('.details__popup-desc-1', 1, { opacity: 1, ease: Power2.easeInOut }, '-=1.85').to('.details__popup-desc-2', 1, { opacity: 1, ease: Power2.easeInOut }, '-=1.25').to('.details__popup-1', 1, { opacity: 0, ease: Power2.easeInOut });
+			popupTL1.to('.details__popup-1', 1, { opacity: 1, ease: Power2.easeInOut }).to('.details__popup-progress', 2, { scaleX: 1, ease: Power2.easeInOut }, '+=0.15').to('.details__popup-desc-1', 1, { opacity: 1, ease: Power2.easeInOut }, '-=1.85').to('.details__popup-desc-2', 1, { opacity: 1, ease: Power2.easeInOut }, '-=1.25').to('.details__popup-1', 1, { opacity: 0, ease: Power2.easeInOut }, '+=1');
 		};
 		var animationPopup2 = function animationPopup2() {
-			popupTL2.to('.details__popup-2', 1, { opacity: 1, ease: Power2.easeInOut }, '-=1').to('.details__popup-2', 1, { opacity: 0, ease: Power2.easeInOut }, '+=5');
+			popupTL2.to('.details__popup-2', 1, { opacity: 1, ease: Power2.easeInOut }, '-=1').to('.details__popup-2', 1, { opacity: 0, ease: Power2.easeInOut }, '+=4');
 		};
 		function completedAnimation1() {
 			popupTL2.restart().play();
 		}
 		function completedAnimation2() {
-			popupTL1.restart();
+			$('.details__animation-bg').removeClass('bounceInLeft').addClass('fadeOut');
+
+			setTimeout(function () {
+				$('.details__animation-bg').removeClass('fadeOut');
+
+				AOS.refreshHard();
+			}, 500);
 		}
 
 		animationPopup1();
@@ -118,18 +124,20 @@ var initSwiper = function initSwiper() {
 
 		AOS.init({
 			offset: 200,
-			delay: 0,
+			delay: 50,
 			duration: 500,
 			easing: 'ease-in-out',
-			once: false,
-			mirror: true,
+			once: true,
+			mirror: false,
 			useClassNames: true,
 			initClassName: false,
 			animatedClassName: 'animated'
 		});
 
 		document.querySelector('.details__animation-bg').addEventListener('animationend', function (ev) {
-			popupTL1.restart().play();
+			setTimeout(function () {
+				popupTL1.restart().play();
+			}, 500);
 		});
 
 		document.addEventListener('aos:out', function () {
@@ -139,10 +147,10 @@ var initSwiper = function initSwiper() {
 	};
 
 	var initPathFloatingAnimation = function initPathFloatingAnimation() {
-		var xMin = -15,
-		    xMax = 15,
-		    yMin = -15,
-		    yMax = 15,
+		var xMin = -2,
+		    xMax = 30,
+		    yMin = 0,
+		    yMax = 5,
 		    positionsPerElement = 5,
 		    secondsPerIteration = 4,
 		    elements = $("[floating-node-js]");

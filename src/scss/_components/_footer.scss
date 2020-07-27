@@ -2,7 +2,7 @@
 
 .footer {
 	padding-top: 200px;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 	background-color: #ffffff;
 
 	&__wrapper {
@@ -10,7 +10,7 @@
 		padding-right: 20px;
 
 		&-1 {
-			padding-bottom: 125px;
+			padding-bottom: 200px;
 		}
 
 		&-2 {
@@ -45,10 +45,10 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		max-width: 620px;
+		max-width: 900px;
 		margin-left: auto;
 		margin-right: auto;
-		padding-top: 150px;
+		padding-top: 200px;
 
 		input,
 		button {
@@ -58,8 +58,8 @@
 
 		input {
 			width: 100%;
-			max-width: 500px;
-			height: 56px;
+			max-width: 522px;
+			height: 76px;
 			padding: 0 20px;
 			margin-right: 10px;
 			border-width: 1px;
@@ -79,9 +79,9 @@
 			cursor: pointer;
 			overflow: hidden;
 			width: 100%;
-			max-width: 230px;
-			height: 56px;
-			margin-left: 10px;
+			max-width: 340px;
+			height: 76px;
+			margin-left: 18px;
 			border: none;
 			border-radius: 5px;
 			background-color: rgb(248, 115, 7);
@@ -123,7 +123,7 @@
 				z-index: 2;
 				position: relative;
 				color: #ffffff;
-				font-size: 20px;
+				font-size: 26px;
 				font-weight: 600;
 			}
 		}

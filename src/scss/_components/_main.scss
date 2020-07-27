@@ -5,7 +5,7 @@
 
 	&__wrapper {
 		display: flex;
-		min-height: 800px;
+		min-height: 924px;
 
 		&-left,
 		&-right {
@@ -16,67 +16,93 @@
 			position: relative;
 			display: flex;
 			align-items: center;
+			justify-content: flex-end;
 			width: 100%;
-			max-width: 692px;
+			max-width: 698px;
 			background-image: linear-gradient(-40deg, rgb(200,232,240) 0%, rgb(136,226,249) 100%);
 
 			img {
 				position: absolute;
 				display: block;
+				max-width: calc(100% / 1.7);
 				height: auto;
+				max-height: 100%;
 
 				&:nth-of-type(1) {
 					z-index: 3;
-					max-width: 70%;
+					right: 136px;
+					margin-top: -188px;
 				}
 				&:nth-of-type(2) {
 					z-index: 2;
-					max-width: 90%;
+					right: -63px;
+					margin-top: 59px;
+					max-width: calc(100% / 1.5);
 				}
 			}
 		}
 
 		&-right {
-			display: flex;
-			align-items: center;
+			//display: flex;
+			//align-items: center;
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
-			padding-left: 100px;
-			padding-right: 100px;
+			padding-left: 120px;
+			padding-right: 15px;
 
 			> div {
+				padding-top: 284px;
 				width: 100%;
-				max-width: 768px;
-				margin-left: auto;
-				margin-right: auto;
+				max-width: 900px;
 			}
 		}
 	}
 
 	&__title {
-		padding-bottom: 20px;
+		padding-bottom: 27px;
+		color: #01084c;
+		letter-spacing: 0.4px;
 		line-height: 1.2;
-		font-size: 55px;
+		font-size: 45px;
 		text-align: left;
 	}
 
 	&__desc {
-		padding-bottom: 40px;
-		font-size: 20px;
+		padding-bottom: 60px;
+		font-size: 29px;
+		line-height: 1.6;
 		color: #000000;
+		letter-spacing: 0.3px;
 	}
 
 	&__info {
-		color: #000000;
-		font-size: 14px;
+		color: #2b2d49;
+		font-size: 16px;
+		letter-spacing: 0.1px;
 	}
 
 	.footer__form {
 		justify-content: flex-start;
+		max-width: 100%;
 		margin-left: 0;
 		padding-top: 0;
-		padding-bottom: 40px;
+		padding-bottom: 25px;
+
+		input {
+			max-width: 522px;
+			height: 76px;
+		}
+
+		button {
+			max-width: 340px;
+			height: 76px;
+			margin-left: 18px;
+
+			span {
+				font-size: 26px;
+			}
+		}
 	}
 }
 

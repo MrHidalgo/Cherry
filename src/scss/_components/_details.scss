@@ -2,12 +2,11 @@
 
 .details {
 	overflow: hidden;
-	padding-top: 150px;
+	padding-top: 252px;
 	padding-bottom: 50px;
 
 	&__wrapper {
 		display: flex;
-		align-items: center;
 
 		&-left,
 		&-right {
@@ -15,19 +14,20 @@
 		}
 
 		&-left {
-			padding-right: 50px;
+			padding-right: 70px;
 		}
 
 		&-right {
-			padding-left: 50px;
+			padding-top: 10px;
+			padding-left: 68px;
 		}
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
-		padding-top: 5px;
-		padding-left: 20px;
+		padding-top: 10px;
+		padding-left: 23px;
 		padding-bottom: 10px;
 		border-left: 2px solid #b6b2b2;
 
@@ -36,20 +36,20 @@
 			flex-direction: column;
 
 			&:not(:last-of-type) {
-				padding-bottom: 20px;
+				padding-bottom: 17px;
 			}
 		}
 
 		&-title {
 			padding-bottom: 5px;
-			font-size: 26px;
+			font-size: 32px;
 			font-weight: bold;
 			color: #01084c;
 		}
 
 		&-desc {
 			line-height: 1.8;
-			font-size: 20px;
+			font-size: 24px;
 			color: #01084c;
 		}
 	}
@@ -60,26 +60,29 @@
 		width: 100%;
 
 		&-bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
+			position: relative;
+			display: block;
+			//top: 0;
+			//left: 0;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
 			box-shadow: 0 -20px 40px 5px rgba(#000, 0.1);
 			background-image: url('../img/img-details-bg@2x.png');
 			background-repeat: no-repeat;
 			background-position: right top;
-			background-size: cover;
+			background-size: contain;
 		}
 	}
 
 	&__popup {
 		position: absolute;
 		top: 0;
-		left: 0;
+		right: 0;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		max-width: 300px;
 		height: 320px;
 		padding: 0 15px;
 		border-radius: 10px;
@@ -105,11 +108,11 @@
 		}
 
 		&-wrapper {
-			position: relative;
-			width: 100%;
-			max-width: 300px;
-			height: 561px;
-			margin-left: auto;
+			//position: absolute;
+			//width: 100%;
+			//max-width: 300px;
+			//height: 561px;
+			//margin-left: auto;
 		}
 
 		&-head {
@@ -324,12 +327,23 @@
 		transform: translate3d(0, 0, 0);
 	}
 }
+@keyframes fadeOut {
+	to {
+		opacity: 1;
+	}
+	form {
+		opacity: 0;
+	}
+}
 .animated {
 	animation-fill-mode: both;
 	animation-duration: 1s;
 }
 .bounceInLeft {
 	animation-name: bounceInLeft;
+}
+.fadeOut {
+	animation-duration: 0.5s;
 }
 
 // SECTION :: END
