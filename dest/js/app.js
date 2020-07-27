@@ -137,6 +137,42 @@ var initSwiper = function initSwiper() {
 			popupTL2.restart().kill();
 		});
 	};
+
+	var initPathFloatingAnimation = function initPathFloatingAnimation() {
+		var xMin = -15,
+		    xMax = 15,
+		    yMin = -15,
+		    yMax = 15,
+		    positionsPerElement = 5,
+		    secondsPerIteration = 4,
+		    elements = $("[floating-node-js]");
+
+		for (var i = 0; i < elements.length; i++) {
+			randomFloat(elements[i], positionsPerElement, secondsPerIteration);
+		}
+
+		function random(min, max) {
+			return min + Math.random() * (max - min);
+		}
+
+		function randomFloat(element, positions, duration) {
+			var tl = new TimelineMax({
+				repeat: -1,
+				yoyo: true,
+				delay: Math.random() * duration
+			});
+
+			for (var _i = 0; _i < positions; _i++) {
+				tl.to(element, duration, {
+					x: random(xMin, xMax),
+					y: random(yMin, yMax),
+					ease: Sine.easeInOut
+				});
+			}
+
+			return tl;
+		}
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -158,6 +194,7 @@ var initSwiper = function initSwiper() {
 		// callback
 		// paymentsRandomView();
 		viewPortAnimation();
+		initPathFloatingAnimation();
 		// ==========================================
 	};
 

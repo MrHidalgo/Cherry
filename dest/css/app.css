@@ -528,7 +528,12 @@ picture {
   font-weight: 600;
 }
 
-/* line 4, src/scss/_components/_main.scss */
+/* line 3, src/scss/_components/_main.scss */
+.main {
+  overflow: hidden;
+}
+
+/* line 6, src/scss/_components/_main.scss */
 .main__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -537,13 +542,22 @@ picture {
   min-height: 800px;
 }
 
-/* line 8, src/scss/_components/_main.scss */
+/* line 10, src/scss/_components/_main.scss */
 .main__wrapper-left, .main__wrapper-right {
   min-height: 100%;
 }
 
-/* line 13, src/scss/_components/_main.scss */
+/* line 15, src/scss/_components/_main.scss */
 .main__wrapper-left {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 692px;
   background-image: -webkit-linear-gradient(130deg, #c8e8f0 0%, #88e2f9 100%);
@@ -551,7 +565,26 @@ picture {
   background-image: linear-gradient(-40deg, #c8e8f0 0%, #88e2f9 100%);
 }
 
-/* line 19, src/scss/_components/_main.scss */
+/* line 23, src/scss/_components/_main.scss */
+.main__wrapper-left img {
+  position: absolute;
+  display: block;
+  height: auto;
+}
+
+/* line 28, src/scss/_components/_main.scss */
+.main__wrapper-left img:nth-of-type(1) {
+  z-index: 3;
+  max-width: 70%;
+}
+
+/* line 32, src/scss/_components/_main.scss */
+.main__wrapper-left img:nth-of-type(2) {
+  z-index: 2;
+  max-width: 90%;
+}
+
+/* line 39, src/scss/_components/_main.scss */
 .main__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -571,7 +604,7 @@ picture {
   padding-right: 100px;
 }
 
-/* line 28, src/scss/_components/_main.scss */
+/* line 48, src/scss/_components/_main.scss */
 .main__wrapper-right > div {
   width: 100%;
   max-width: 768px;
@@ -579,7 +612,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 37, src/scss/_components/_main.scss */
+/* line 57, src/scss/_components/_main.scss */
 .main__title {
   padding-bottom: 20px;
   line-height: 1.2;
@@ -587,20 +620,20 @@ picture {
   text-align: left;
 }
 
-/* line 44, src/scss/_components/_main.scss */
+/* line 64, src/scss/_components/_main.scss */
 .main__desc {
   padding-bottom: 40px;
   font-size: 20px;
   color: #000000;
 }
 
-/* line 50, src/scss/_components/_main.scss */
+/* line 70, src/scss/_components/_main.scss */
 .main__info {
   color: #000000;
   font-size: 14px;
 }
 
-/* line 55, src/scss/_components/_main.scss */
+/* line 75, src/scss/_components/_main.scss */
 .main .footer__form {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -771,7 +804,7 @@ picture {
   position: relative;
   width: 100%;
   max-width: 300px;
-  height: 580px;
+  height: 561px;
   margin-left: auto;
 }
 
