@@ -4,9 +4,19 @@
 	overflow: hidden;
 	padding-top: 252px;
 	padding-bottom: 50px;
+	@include adaptive(1279) {
+		padding-top: 150px;
+	}
 
 	&__wrapper {
 		display: flex;
+		@include adaptive(1535) {
+			align-items: center;
+		}
+		@include adaptive(1023) {
+			flex-direction: column;
+			justify-content: center;
+		}
 
 		&-left,
 		&-right {
@@ -15,11 +25,31 @@
 
 		&-left {
 			padding-right: 70px;
+			@include adaptive(1799) {
+				padding-right: 0;
+			}
+			@include adaptive(1439) {
+				width: 60%;
+			}
+			@include adaptive(1023) {
+				width: 100%;
+				padding: 0 30px 50px;
+			}
 		}
 
 		&-right {
 			padding-top: 10px;
 			padding-left: 68px;
+			padding-right: 15px;
+			@include adaptive(1439) {
+				width: 40%;
+				padding-left: 40px;
+			}
+			@include adaptive(1023) {
+				width: 100%;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
 		}
 	}
 
@@ -45,12 +75,30 @@
 			font-size: 32px;
 			font-weight: bold;
 			color: #01084c;
+			@include adaptive(1535) {
+				font-size: 29px;
+			}
+			@include adaptive(1439) {
+				font-size: 27px;
+			}
+			@include adaptive(1279) {
+				font-size: 22px;
+			}
 		}
 
 		&-desc {
 			line-height: 1.8;
 			font-size: 24px;
 			color: #01084c;
+			@include adaptive(1535) {
+				font-size: 22px;
+			}
+			@include adaptive(1439) {
+				font-size: 20px;
+			}
+			@include adaptive(1279) {
+				font-size: 18px;
+			}
 		}
 	}
 

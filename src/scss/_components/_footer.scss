@@ -4,6 +4,9 @@
 	padding-top: 200px;
 	padding-bottom: 40px;
 	background-color: #ffffff;
+	@include adaptive(1535) {
+		padding-top: 150px;
+	}
 
 	&__wrapper {
 		padding-left: 20px;
@@ -11,6 +14,9 @@
 
 		&-1 {
 			padding-bottom: 200px;
+			@include adaptive(1535) {
+				padding-bottom: 150px;
+			}
 		}
 
 		&-2 {
@@ -49,6 +55,9 @@
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 200px;
+		@include adaptive(1535) {
+			padding-top: 150px;
+		}
 
 		input,
 		button {
@@ -73,6 +82,9 @@
 				font-size: 20px;
 				font-weight: 500;
 			}
+			@include adaptive(1439) {
+				height: 66px;
+			}
 		}
 
 		button {
@@ -87,6 +99,9 @@
 			background-color: rgb(248, 115, 7);
 			box-shadow: 0 3px 0 0 rgba(#000, 0);
 			@include transition(box-shadow, transform);
+			@include adaptive(1439) {
+				height: 66px;
+			}
 
 			&:before,
 			&:after {
@@ -125,6 +140,9 @@
 				color: #ffffff;
 				font-size: 26px;
 				font-weight: 600;
+				@include adaptive(1439) {
+					font-size: 23px;
+				}
 			}
 		}
 	}

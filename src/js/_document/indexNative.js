@@ -155,7 +155,7 @@
 		// callback
 		// paymentsRandomView();
 		viewPortAnimation();
-		initPathFloatingAnimation();
+		// initPathFloatingAnimation();
 		// ==========================================
 	};
 

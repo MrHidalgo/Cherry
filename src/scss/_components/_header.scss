@@ -17,6 +17,14 @@
 		height: 140px;
 		padding-left: 73px;
 		padding-right: 73px;
+		@include adaptive(1439) {
+			height: 120px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		@include adaptive(1279) {
+			height: 100px;
+		}
 	}
 
 	&__nav {
@@ -29,6 +37,12 @@
 			align-items: center;
 			color: #000;
 			font-size: 21px;
+			@include adaptive(1279) {
+				font-size: 18px;
+			}
+			@include adaptive(1023) {
+				font-size: 16px;
+			}
 
 			&:not(:last-of-type) {
 				margin-right: 30px;

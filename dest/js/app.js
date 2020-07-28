@@ -202,7 +202,7 @@ var initSwiper = function initSwiper() {
 		// callback
 		// paymentsRandomView();
 		viewPortAnimation();
-		initPathFloatingAnimation();
+		// initPathFloatingAnimation();
 		// ==========================================
 	};
 
