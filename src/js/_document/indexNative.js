@@ -125,7 +125,7 @@
 			for (var _i = 0; _i < positions; _i++) {
 				tl.to(element, duration, {
 					x: random(xMin, xMax),
-					y: random(yMin, yMax),
+					// y: random(yMin, yMax),
 					ease: Sine.easeInOut
 				});
 			}
@@ -155,7 +155,7 @@
 		// callback
 		// paymentsRandomView();
 		viewPortAnimation();
-		// initPathFloatingAnimation();
+		initPathFloatingAnimation();
 		// ==========================================
 	};
 
