@@ -7,6 +7,10 @@
 	@include adaptive(1279) {
 		padding-top: 150px;
 	}
+	@include adaptive(767) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -35,6 +39,9 @@
 				width: 100%;
 				padding: 0 30px 50px;
 			}
+			@include adaptive(767) {
+				display: none;
+			}
 		}
 
 		&-right {
@@ -50,6 +57,9 @@
 				padding-left: 30px;
 				padding-right: 30px;
 			}
+			@include adaptive(767) {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -60,6 +70,9 @@
 		padding-left: 23px;
 		padding-bottom: 10px;
 		border-left: 2px solid #b6b2b2;
+		@include adaptive(767) {
+			border: none;
+		}
 
 		&-item {
 			display: flex;

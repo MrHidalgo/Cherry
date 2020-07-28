@@ -2,6 +2,10 @@
 
 .main {
 	overflow: hidden;
+	@include adaptive(767) {
+		padding-bottom: 50px;
+		background-image: linear-gradient(-40deg, rgb(200,232,240) 0%, rgb(136,226,249) 100%);
+	}
 
 	&__wrapper {
 		display: flex;
@@ -11,6 +15,12 @@
 		}
 		@include adaptive(1279) {
 			min-height: 724px;
+		}
+		@include adaptive(767) {
+			flex-wrap: wrap;
+			min-height: unset;
+			padding-top: 125px;
+			padding-bottom: 0;
 		}
 
 		&-left,
@@ -29,70 +39,74 @@
 			@include adaptive(1439) {
 				max-width: 45%;
 			}
+			@include adaptive(767) {
+				order: 2;
+				max-width: 100%;
+				padding-top: 30px;
+				background-image: none;
+			}
+
+			> div {
+				position: relative;
+				left: -30px;
+				width: 100%;
+				max-width: 500px;
+				height: 510px;
+				@include adaptive(1439) {
+					max-width: 450px;
+					height: 460px;
+				}
+				@include adaptive(1279) {
+					max-width: 350px;
+					height: 360px;
+				}
+				@include adaptive(1023) {
+					max-width: 300px;
+					height: 307px;
+				}
+				@include adaptive(767) {
+					left: auto;
+					margin-left: auto;
+					margin-right: auto;
+					height: 320px;
+				}
+			}
 
 			img {
 				position: absolute;
 				display: block;
-				max-width: calc(100% / 1.7);
+				max-width: 100%;
 				height: auto;
 				max-height: 100%;
-				@include adaptive(1439) {
-					max-width: calc(100% / 1.5);
-				}
-				@include adaptive(1353) {
-					max-width: calc(100% / 1.3);
-				}
-				@include adaptive(1279) {
-					max-width: calc(100% / 1.4);
-				}
-				@include adaptive(1023) {
-					max-width: calc(100% / 1.2);
-				}
+				backface-visibility: hidden;
+				transform-origin: center;
 
 				&:nth-of-type(1) {
 					z-index: 3;
-					right: 136px;
-					margin-top: -188px;
-					@include adaptive(1439) {
-						right: 110px;
-						margin-top: -178px;
-					}
-					@include adaptive(1365) {
-						right: 96px;
-						margin-top: -168px;
-					}
+					top: 0;
+					left: -80px;
 					@include adaptive(1279) {
-						right: 66px;
-						margin-top: -118px;
+						left: -40px;
 					}
 					@include adaptive(1023) {
-						right: 26px;
-						margin-top: -100px;
+						left: -20px;
+					}
+					@include adaptive(767) {
+						left: -30px;
 					}
 				}
 				&:nth-of-type(2) {
 					z-index: 2;
-					right: -63px;
-					margin-top: 59px;
-					max-width: calc(100% / 1.5);
-					@include adaptive(1439) {
-						max-width: calc(100% / 1.4);
-					}
-					@include adaptive(1353) {
-						max-width: calc(100% / 1.3);
-						margin-top: 84px;
-					}
-					@include adaptive(1023) {
-						right: -73px;
-						max-width: calc(100% / 1.15);
+					bottom: 0;
+					left: 100px;
+					@include adaptive(767) {
+						left: 50px;
 					}
 				}
 			}
 		}
 
 		&-right {
-			//display: flex;
-			//align-items: center;
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
@@ -106,6 +120,11 @@
 				padding-left: 93px;
 				padding-right: 30px;
 			}
+			@include adaptive(767) {
+				order: 1;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 
 			> div {
 				padding-top: 284px;
@@ -113,6 +132,10 @@
 				max-width: 900px;
 				@include adaptive(1535) {
 					padding-top: 50px;
+				}
+				@include adaptive(767) {
+					padding-top: 0;
+					text-align: center;
 				}
 			}
 		}
@@ -133,6 +156,9 @@
 		}
 		@include adaptive(1023) {
 			font-size: 34px;
+		}
+		@include adaptive(767) {
+			text-align: center;
 		}
 	}
 

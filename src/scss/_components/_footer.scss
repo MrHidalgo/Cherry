@@ -7,15 +7,25 @@
 	@include adaptive(1535) {
 		padding-top: 150px;
 	}
+	@include adaptive(767) {
+		padding-top: 100px;
+	}
 
 	&__wrapper {
 		padding-left: 20px;
 		padding-right: 20px;
+		@include adaptive(767) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 
 		&-1 {
 			padding-bottom: 200px;
 			@include adaptive(1535) {
 				padding-bottom: 150px;
+			}
+			@include adaptive(767) {
+				padding-bottom: 100px;
 			}
 		}
 
@@ -23,13 +33,23 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@include adaptive(767) {
+				flex-direction: column;
+			}
 
 			> div {
 				&:nth-of-type(1) {
 					padding-right: 30px;
+					@include adaptive(767) {
+						padding-right: 0;
+						padding-bottom: 10px;
+					}
 				}
 				&:nth-of-type(2) {
 					padding-left: 30px;
+					@include adaptive(767) {
+						padding-left: 0;
+					}
 				}
 			}
 		}
@@ -58,6 +78,10 @@
 		@include adaptive(1535) {
 			padding-top: 150px;
 		}
+		@include adaptive(767) {
+			flex-wrap: wrap;
+			padding-top: 100px;
+		}
 
 		input,
 		button {
@@ -85,6 +109,14 @@
 			@include adaptive(1439) {
 				height: 66px;
 			}
+			@include adaptive(767) {
+				max-width: 100%;
+				height: 56px;
+				margin-right: 0;
+				border-bottom: none;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
 		}
 
 		button {
@@ -101,6 +133,13 @@
 			@include transition(box-shadow, transform);
 			@include adaptive(1439) {
 				height: 66px;
+			}
+			@include adaptive(767) {
+				max-width: 100%;
+				height: 56px;
+				margin-left: 0;
+				border-top-right-radius: 0;
+				border-top-left-radius: 0;
 			}
 
 			&:before,

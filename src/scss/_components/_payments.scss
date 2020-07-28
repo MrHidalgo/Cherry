@@ -3,6 +3,9 @@
 .payments {
 	padding-top: 100px;
 	padding-bottom: 50px;
+	@include adaptive(767) {
+		padding-bottom: 100px;
+	}
 
 	&__wrapper {
 		position: relative;
@@ -11,6 +14,9 @@
 
 		&-1 {
 			padding-bottom: 45px;
+			@include adaptive(767) {
+				padding-bottom: 75px;
+			}
 		}
 
 		&-2 {
@@ -43,18 +49,22 @@
 		height: 100%;
 
 		&-img {
-			//display: none;
 			position: absolute;
-			max-width: 100%;
 			max-width: 125px;
 			height: auto;
 			@include adaptive(1023) {
 				transform: scale(0.85);
 			}
+			@include adaptive(767) {
+				transform: scale(0.75);
+			}
 
 			&-1 {
 				top: 25px;
 				left: 200px;
+				@include adaptive(767) {
+					left: 15px;
+				}
 			}
 			&-2 {
 				top: 100px;
@@ -63,34 +73,55 @@
 			&-3 {
 				top: -15px;
 				right: 200px;
+				@include adaptive(767) {
+					right: 15px;
+				}
 			}
 			&-4 {
 				top: 125px;
 				right: 48%;
+				@include adaptive(767) {
+					top: 100px;
+					right: auto;
+					left: 10%;
+				}
 			}
 			&-5 {
 				top: 175px;
 				right: 50px;
-				//max-width: 110px;
+				@include adaptive(767) {
+					top: 100px;
+					right: 30px;
+				}
 			}
 			&-6 {
 				right: 125px;
 				bottom: 50px;
+				@include adaptive(767) {
+					right: 15px;
+					bottom: 30px;
+				}
 			}
 			&-7 {
 				right: 32%;
 				bottom: 100px;
-				//max-width: 110px;
 			}
 			&-8 {
 				left: 47%;
 				bottom: 125px;
-				//max-width: 110px;
+				@include adaptive(767) {
+					left: auto;
+					right: 100px;
+					bottom: 100px;
+				}
 			}
 			&-9 {
 				left: 15%;
 				bottom: -15px;
-				//max-width: 75px;
+				@include adaptive(767) {
+					left: 30px;
+					bottom: -30px;
+				}
 			}
 			&-10 {
 				left: 125px;
@@ -99,7 +130,10 @@
 			&-11 {
 				left: 75px;
 				bottom: 60%;
-				//max-width: 90px;
+				@include adaptive(767) {
+					left: 15px;
+					bottom: 100px;
+				}
 			}
 		}
 	}

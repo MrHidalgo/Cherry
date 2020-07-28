@@ -14,6 +14,9 @@
 		@include adaptive(1279) {
 			max-width: 105px;
 		}
+		@include adaptive(767) {
+			max-width: 95px;
+		}
 	}
 
 	&__img {

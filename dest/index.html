@@ -20,8 +20,16 @@
       <div class="header__wrapper">
         <div class="header__wrapper-left">
           <div class="logo logo--header"><a class="logo__btn" href="#"><img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt=""></a></div>
+          <div class="hamburger hamburger--squeeze" role="button" hamburger-js="hamburger-js">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
         </div>
-        <div class="header__wrapper-right">
+        <div class="header__wrapper-right" mobile-block-js><a class="header__close" href="#">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+              <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717      L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859      c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287      l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285      L284.286,256.002z"></path>
+            </svg></a>
           <nav class="header__nav"><a class="header__nav-link" href="#">How It Works</a><a class="header__nav-link" href="#">Issuers & Card Networks</a></nav>
         </div>
       </div>
@@ -31,7 +39,9 @@
       <!-- SECTION :: START-->
       <section class="main" id="main">
         <div class="main__wrapper">
-          <div class="main__wrapper-left"><img src="img/card-image-final-top.png" alt="" floating-node-js><img src="img/card-image-final-bottom.png" alt=""></div>
+          <div class="main__wrapper-left">
+            <div><img src="img/card-image-final-top.png" alt="" floating-node-js><img src="img/card-image-final-bottom.png" alt=""></div>
+          </div>
           <div class="main__wrapper-right">
             <div>
               <h1 class="main__title c-title">Have more than one card in your wallet?</h1>

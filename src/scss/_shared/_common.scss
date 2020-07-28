@@ -4,6 +4,9 @@
 	&__text {
 		color: #706e6e;
 		font-size: 14px;
+		@include adaptive(767) {
+			font-size: 12px;
+		}
 	}
 }
 
