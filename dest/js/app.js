@@ -212,7 +212,7 @@ var initSwiper = function initSwiper() {
 				tl.to(element, duration, {
 					x: random(xMin, xMax),
 					// y: random(yMin, yMax),
-					ease: Sine.easeInOut
+					ease: Power1.easeInOut
 				});
 			}
 
