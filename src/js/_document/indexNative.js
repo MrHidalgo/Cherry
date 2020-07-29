@@ -99,8 +99,8 @@
 
 
 	const initPathFloatingAnimation = () => {
-		let xMin = -2,
-			xMax = 30,
+		let xMin = -5,
+			xMax = 40,
 			yMin = 0,
 			yMax = 5,
 			positionsPerElement = 5,
@@ -119,7 +119,7 @@
 			var tl = new TimelineMax({
 				repeat: -1,
 				yoyo: true,
-				delay: Math.random() * duration
+				// delay: Math.random() * duration
 			});
 
 			for (var _i = 0; _i < positions; _i++) {

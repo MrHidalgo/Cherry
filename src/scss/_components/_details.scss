@@ -4,6 +4,9 @@
 	overflow: hidden;
 	padding-top: 252px;
 	padding-bottom: 50px;
+	@include adaptive(1365) {
+		padding-top: 200px;
+	}
 	@include adaptive(1279) {
 		padding-top: 150px;
 	}

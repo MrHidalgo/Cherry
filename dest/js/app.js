@@ -185,8 +185,8 @@ var initSwiper = function initSwiper() {
 	};
 
 	var initPathFloatingAnimation = function initPathFloatingAnimation() {
-		var xMin = -2,
-		    xMax = 30,
+		var xMin = -5,
+		    xMax = 40,
 		    yMin = 0,
 		    yMax = 5,
 		    positionsPerElement = 5,
@@ -204,8 +204,8 @@ var initSwiper = function initSwiper() {
 		function randomFloat(element, positions, duration) {
 			var tl = new TimelineMax({
 				repeat: -1,
-				yoyo: true,
-				delay: Math.random() * duration
+				yoyo: true
+				// delay: Math.random() * duration
 			});
 
 			for (var _i = 0; _i < positions; _i++) {
