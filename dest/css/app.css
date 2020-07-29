@@ -1054,13 +1054,6 @@ picture {
 @media screen and (max-width: 1535px) {
   /* line 10, src/scss/_components/_main.scss */
   .main__wrapper {
-    min-height: 824px;
-  }
-}
-
-@media screen and (max-width: 1365px) {
-  /* line 10, src/scss/_components/_main.scss */
-  .main__wrapper {
     min-height: 724px;
   }
 }
@@ -1077,12 +1070,12 @@ picture {
   }
 }
 
-/* line 26, src/scss/_components/_main.scss */
+/* line 23, src/scss/_components/_main.scss */
 .main__wrapper-left, .main__wrapper-right {
   min-height: 100%;
 }
 
-/* line 31, src/scss/_components/_main.scss */
+/* line 28, src/scss/_components/_main.scss */
 .main__wrapper-left {
   position: relative;
   display: -webkit-box;
@@ -1104,22 +1097,22 @@ picture {
   background-image: linear-gradient(-40deg, #c8e8f0 0%, #88e2f9 100%);
 }
 
-@media screen and (max-width: 1439px) {
-  /* line 31, src/scss/_components/_main.scss */
+@media screen and (max-width: 1535px) {
+  /* line 28, src/scss/_components/_main.scss */
   .main__wrapper-left {
-    max-width: 45%;
+    max-width: 550px;
   }
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 31, src/scss/_components/_main.scss */
+  /* line 28, src/scss/_components/_main.scss */
   .main__wrapper-left {
     max-width: 510px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 31, src/scss/_components/_main.scss */
+  /* line 28, src/scss/_components/_main.scss */
   .main__wrapper-left {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
@@ -1131,7 +1124,7 @@ picture {
   }
 }
 
-/* line 52, src/scss/_components/_main.scss */
+/* line 49, src/scss/_components/_main.scss */
 .main__wrapper-left > div {
   position: relative;
   left: -30px;
@@ -1140,16 +1133,16 @@ picture {
   height: 520px;
 }
 
-@media screen and (max-width: 1439px) {
-  /* line 52, src/scss/_components/_main.scss */
+@media screen and (max-width: 1535px) {
+  /* line 49, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
-    max-width: 450px;
-    height: 460px;
+    max-width: 360px;
+    height: 370px;
   }
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 52, src/scss/_components/_main.scss */
+  /* line 49, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     max-width: 370px;
     height: 380px;
@@ -1157,7 +1150,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 52, src/scss/_components/_main.scss */
+  /* line 49, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     max-width: 350px;
     height: 360px;
@@ -1165,7 +1158,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 52, src/scss/_components/_main.scss */
+  /* line 49, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     max-width: 300px;
     height: 307px;
@@ -1173,7 +1166,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 52, src/scss/_components/_main.scss */
+  /* line 49, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     left: auto;
     margin-left: auto;
@@ -1182,7 +1175,7 @@ picture {
   }
 }
 
-/* line 82, src/scss/_components/_main.scss */
+/* line 79, src/scss/_components/_main.scss */
 .main__wrapper-left img {
   position: absolute;
   display: block;
@@ -1196,36 +1189,43 @@ picture {
           transform-origin: center;
 }
 
-/* line 91, src/scss/_components/_main.scss */
+/* line 88, src/scss/_components/_main.scss */
 .main__wrapper-left img:nth-of-type(1) {
   z-index: 3;
   top: 0;
   left: -80px;
 }
 
+@media screen and (max-width: 1535px) {
+  /* line 88, src/scss/_components/_main.scss */
+  .main__wrapper-left img:nth-of-type(1) {
+    left: -25px;
+  }
+}
+
 @media screen and (max-width: 1365px) {
-  /* line 91, src/scss/_components/_main.scss */
+  /* line 88, src/scss/_components/_main.scss */
   .main__wrapper-left img:nth-of-type(1) {
     left: -40px;
   }
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 91, src/scss/_components/_main.scss */
+  /* line 88, src/scss/_components/_main.scss */
   .main__wrapper-left img:nth-of-type(1) {
     left: -40px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 91, src/scss/_components/_main.scss */
+  /* line 88, src/scss/_components/_main.scss */
   .main__wrapper-left img:nth-of-type(1) {
     left: -20px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 91, src/scss/_components/_main.scss */
+  /* line 88, src/scss/_components/_main.scss */
   .main__wrapper-left img:nth-of-type(1) {
     left: -30px;
   }
@@ -1512,7 +1512,7 @@ picture {
   padding-bottom: 50px;
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1535px) {
   /* line 3, src/scss/_components/_details.scss */
   .details {
     padding-top: 200px;

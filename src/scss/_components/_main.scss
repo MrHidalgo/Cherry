@@ -11,9 +11,6 @@
 		display: flex;
 		min-height: 924px;
 		@include adaptive(1535) {
-			min-height: 824px;
-		}
-		@include adaptive(1365) {
 			min-height: 724px;
 		}
 		@include adaptive(767) {
@@ -36,8 +33,8 @@
 			width: 100%;
 			max-width: 698px;
 			background-image: linear-gradient(-40deg, rgb(200,232,240) 0%, rgb(136,226,249) 100%);
-			@include adaptive(1439) {
-				max-width: 45%;
+			@include adaptive(1535) {
+				max-width: 550px;
 			}
 			@include adaptive(1365) {
 				max-width: 510px;
@@ -55,9 +52,9 @@
 				width: 100%;
 				max-width: 500px;
 				height: 520px;
-				@include adaptive(1439) {
-					max-width: 450px;
-					height: 460px;
+				@include adaptive(1535) {
+					max-width: 360px;
+					height: 370px;
 				}
 				@include adaptive(1365) {
 					max-width: 370px;
@@ -92,6 +89,9 @@
 					z-index: 3;
 					top: 0;
 					left: -80px;
+					@include adaptive(1535) {
+						left: -25px;
+					}
 					@include adaptive(1365) {
 						left: -40px;
 					}
