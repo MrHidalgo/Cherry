@@ -11,3 +11,17 @@ block content
 		include components/_main
 		include components/_details
 		include components/_payments
+
+		mixin modalContent()
+			.c-modal__body
+
+				p.c-modal__title Congratulations!
+
+				p.c-modal__subtitle We're skipping you to the front of our 250k waitlist.
+				p.c-modal__subtitle You'll get through your inbox twice as fast before!
+				p.c-modal__subtitle Let's do a quick survey to get started...
+
+				a.c-modal__btn(href="#")
+					span Onwards
+
+		+modal('congratModal', 'modalContent')

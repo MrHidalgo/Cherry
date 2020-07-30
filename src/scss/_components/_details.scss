@@ -2,17 +2,30 @@
 
 .details {
 	overflow: hidden;
-	padding-top: 252px;
+	padding-top: 152px;
 	padding-bottom: 50px;
 	@include adaptive(1535) {
-		padding-top: 200px;
+		padding-top: 100px;
 	}
 	@include adaptive(1279) {
-		padding-top: 150px;
+		padding-top: 75px;
 	}
 	@include adaptive(767) {
 		padding-top: 100px;
+		padding-bottom: 50px;
+	}
+
+	&__title {
 		padding-bottom: 100px;
+		@include adaptive(1535) {
+			padding-bottom: 50px;
+		}
+		@include adaptive(1279) {
+			padding-bottom: 75px;
+		}
+		@include adaptive(767) {
+			padding-bottom: 25px;
+		}
 	}
 
 	&__wrapper {

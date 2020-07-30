@@ -42,6 +42,7 @@
 
 	&__logo {
 		z-index: 0;
+		opacity: 0.5;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -67,8 +68,12 @@
 				}
 			}
 			&-2 {
-				top: 100px;
-				left: 40%;
+				top: 85px;
+				left: 34%;
+				@include adaptive(767) {
+					top: 45px;
+					left: 44%;
+				}
 			}
 			&-3 {
 				top: -15px;
@@ -79,7 +84,7 @@
 			}
 			&-4 {
 				top: 125px;
-				right: 48%;
+				right: 38%;
 				@include adaptive(767) {
 					top: 100px;
 					right: auto;
@@ -105,9 +110,13 @@
 			&-7 {
 				right: 32%;
 				bottom: 100px;
+				@include adaptive(767) {
+					right: 15px;
+					bottom: 140px;
+				}
 			}
 			&-8 {
-				left: 47%;
+				left: 37%;
 				bottom: 125px;
 				@include adaptive(767) {
 					left: auto;

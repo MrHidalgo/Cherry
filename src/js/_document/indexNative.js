@@ -150,6 +150,7 @@
 
 		// lib
 		initSwiper();
+		initPopups();
 		initHamburger();
 		// ==========================================
 

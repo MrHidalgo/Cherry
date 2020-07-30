@@ -60,6 +60,12 @@
 		max-width: 768px;
 		margin-left: auto;
 		margin-right: auto;
+
+		.swiper {
+			&-wrapper {
+				align-items: center;
+			}
+		}
 	}
 
 	&__title {
@@ -69,6 +75,7 @@
 	&__form {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		justify-content: center;
 		width: 100%;
 		max-width: 900px;
@@ -81,6 +88,44 @@
 		@include adaptive(767) {
 			flex-wrap: wrap;
 			padding-top: 100px;
+		}
+
+		> div {
+			&:nth-of-type(1),
+			&:nth-of-type(2) {
+				width: 50%;
+				@include adaptive(767) {
+					width: 100%;
+				}
+			}
+
+			&:nth-of-type(1) {
+				padding-right: 15px;
+				@include adaptive(767) {
+					padding-right: 0;
+				}
+			}
+			&:nth-of-type(2) {
+				padding-left: 15px;
+				@include adaptive(767) {
+					padding-left: 0;
+
+					input {
+						border-top-left-radius: 0;
+						border-top-right-radius: 0;
+					}
+				}
+			}
+
+			&:nth-of-type(3) {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				padding-top: 30px;
+				@include adaptive(767) {
+					padding-top: 0;
+				}
+			}
 		}
 
 		input,
@@ -100,11 +145,14 @@
 			border-style: solid;
 			border-radius: 5px;
 			background-color: rgb(249, 245, 249);
-			font-size: 20px;
+			font-size: 22px;
 			font-weight: 500;
+			text-align: center;
 			@include inputPlaceholder {
-				font-size: 20px;
+				font-size: 22px;
 				font-weight: 500;
+				text-align: center;
+				color: #d3d3d3;
 			}
 			@include adaptive(1439) {
 				height: 66px;

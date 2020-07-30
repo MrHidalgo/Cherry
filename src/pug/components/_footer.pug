@@ -7,18 +7,26 @@ footer#footer.footer
 			.footer__slider
 				mixin swiperContent()
 					.swiper-slide
-						p.footer__title.c-title “Recognize the Increasing Shift to Digital Commerce”
+						p.footer__title.c-title “Recognize the increasing shift to digital commerce.”
 					.swiper-slide
-						p.footer__title.c-title “Recognize the Increasing Shift to Digital Commerce”
+						p.footer__title.c-title “Time to rethink on card rewards 50 years old card reward programs”
 					.swiper-slide
-						p.footer__title.c-title “Recognize the Increasing Shift to Digital Commerce”
+						p.footer__title.c-title “Increases your payment volume”
+					.swiper-slide
+						p.footer__title.c-title “Compete with premium rewards cards”
+					.swiper-slide
+						p.footer__title.c-title “Offer smart rewards at the point of sales, right when they check out”
 
 				+swiper('footerSwiper', 'swiperContent', false, false, false)
 
 			form.footer__form(action='' method='' autocomplete='off')
-				input(type='text' name='' placeholder='' required)
-				button(type='submit')
-					span Partner with Us
+				div
+					input(type='text' name='' placeholder='Name' required)
+				div
+					input(type='email' name='' placeholder='Email' required)
+				div
+					button(type='submit')
+						span Partner with Us
 
 		.footer__wrapper.footer__wrapper-2
 			div
