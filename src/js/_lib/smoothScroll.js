@@ -14,7 +14,7 @@ const initSmoothScroll = (
 
     let linkHref = $(e.currentTarget).attr('href'),
       headerHeight = $(".header").outerHeight() || 0,
-      topHeightOffset = $(linkHref).offset().top - headerHeight;
+      topHeightOffset = $(linkHref).offset().top;
 
     $('body, html').animate({
       scrollTop: topHeightOffset

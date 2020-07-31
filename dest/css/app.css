@@ -2660,14 +2660,17 @@ picture {
   position: absolute;
   max-width: 125px;
   height: auto;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 @media screen and (max-width: 1023px) {
   /* line 52, src/scss/_components/_payments.scss */
   .payments__logo-img {
-    -webkit-transform: scale(0.85);
-        -ms-transform: scale(0.85);
-            transform: scale(0.85);
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -2680,54 +2683,54 @@ picture {
   }
 }
 
-/* line 63, src/scss/_components/_payments.scss */
+/* line 64, src/scss/_components/_payments.scss */
 .payments__logo-img-1 {
   top: 25px;
   left: 200px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 63, src/scss/_components/_payments.scss */
+  /* line 64, src/scss/_components/_payments.scss */
   .payments__logo-img-1 {
     left: 15px;
   }
 }
 
-/* line 70, src/scss/_components/_payments.scss */
+/* line 71, src/scss/_components/_payments.scss */
 .payments__logo-img-2 {
   top: 85px;
   left: 34%;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 70, src/scss/_components/_payments.scss */
+  /* line 71, src/scss/_components/_payments.scss */
   .payments__logo-img-2 {
     top: 45px;
     left: 44%;
   }
 }
 
-/* line 78, src/scss/_components/_payments.scss */
+/* line 79, src/scss/_components/_payments.scss */
 .payments__logo-img-3 {
   top: -15px;
   right: 200px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 78, src/scss/_components/_payments.scss */
+  /* line 79, src/scss/_components/_payments.scss */
   .payments__logo-img-3 {
     right: 15px;
   }
 }
 
-/* line 85, src/scss/_components/_payments.scss */
+/* line 86, src/scss/_components/_payments.scss */
 .payments__logo-img-4 {
   top: 125px;
   right: 38%;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 85, src/scss/_components/_payments.scss */
+  /* line 86, src/scss/_components/_payments.scss */
   .payments__logo-img-4 {
     top: 100px;
     right: auto;
@@ -2735,56 +2738,56 @@ picture {
   }
 }
 
-/* line 94, src/scss/_components/_payments.scss */
+/* line 95, src/scss/_components/_payments.scss */
 .payments__logo-img-5 {
   top: 175px;
   right: 50px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 94, src/scss/_components/_payments.scss */
+  /* line 95, src/scss/_components/_payments.scss */
   .payments__logo-img-5 {
     top: 100px;
     right: 30px;
   }
 }
 
-/* line 102, src/scss/_components/_payments.scss */
+/* line 103, src/scss/_components/_payments.scss */
 .payments__logo-img-6 {
   right: 125px;
   bottom: 50px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 102, src/scss/_components/_payments.scss */
+  /* line 103, src/scss/_components/_payments.scss */
   .payments__logo-img-6 {
     right: 15px;
     bottom: 30px;
   }
 }
 
-/* line 110, src/scss/_components/_payments.scss */
+/* line 111, src/scss/_components/_payments.scss */
 .payments__logo-img-7 {
   right: 32%;
   bottom: 100px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 110, src/scss/_components/_payments.scss */
+  /* line 111, src/scss/_components/_payments.scss */
   .payments__logo-img-7 {
     right: 15px;
     bottom: 140px;
   }
 }
 
-/* line 118, src/scss/_components/_payments.scss */
+/* line 119, src/scss/_components/_payments.scss */
 .payments__logo-img-8 {
   left: 37%;
   bottom: 125px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 118, src/scss/_components/_payments.scss */
+  /* line 119, src/scss/_components/_payments.scss */
   .payments__logo-img-8 {
     left: auto;
     right: 100px;
@@ -2792,34 +2795,34 @@ picture {
   }
 }
 
-/* line 127, src/scss/_components/_payments.scss */
+/* line 128, src/scss/_components/_payments.scss */
 .payments__logo-img-9 {
   left: 15%;
   bottom: -15px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 127, src/scss/_components/_payments.scss */
+  /* line 128, src/scss/_components/_payments.scss */
   .payments__logo-img-9 {
     left: 30px;
     bottom: -30px;
   }
 }
 
-/* line 135, src/scss/_components/_payments.scss */
+/* line 136, src/scss/_components/_payments.scss */
 .payments__logo-img-10 {
   left: 125px;
   bottom: 175px;
 }
 
-/* line 139, src/scss/_components/_payments.scss */
+/* line 140, src/scss/_components/_payments.scss */
 .payments__logo-img-11 {
   left: 75px;
   bottom: 60%;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 139, src/scss/_components/_payments.scss */
+  /* line 140, src/scss/_components/_payments.scss */
   .payments__logo-img-11 {
     left: 15px;
     bottom: 100px;

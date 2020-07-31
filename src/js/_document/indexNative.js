@@ -152,6 +152,7 @@
 		initSwiper();
 		initPopups();
 		initHamburger();
+		initSmoothScroll();
 		// ==========================================
 
 		// callback
