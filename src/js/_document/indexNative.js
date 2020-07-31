@@ -41,21 +41,21 @@
 			});
 
 		const animationPopup1 = () => {
-			popupTL1.set('.details__popup-desc-1, .details__popup-desc-2', {opacity: 0});
+			popupTL1.set('.details__popup-desc-2', {opacity: 0});
 			popupTL1.set('.details__popup-progress', {scaleX: 0, transformOrigin: 'left 0'});
 
 			popupTL1
 				.to('.details__popup-1', 1, {opacity: 1, ease: Power2.easeInOut})
-				.to('.details__popup-progress', 2, {scaleX: 1, ease: Power2.easeInOut}, '+=0.15')
-				.to('.details__popup-desc-1', 1, {opacity: 1, ease: Power2.easeInOut}, '-=1.85')
-				.to('.details__popup-desc-2', 1, {opacity: 1, ease: Power2.easeInOut}, '-=1.25')
-				.to('.details__popup-1', 1, {opacity: 0, ease: Power2.easeInOut}, '+=1')
+				.to('.details__popup-progress', 3.5, {scaleX: 1, ease: Power2.linear})
+				// .to('.details__popup-desc-1', 2, {opacity: 1, ease: Power2.easeInOut}, '-=1.75')
+				.to('.details__popup-desc-2', 2, {opacity: 1, ease: Power2.easeInOut}, '-=2')
+				.to('.details__popup-1', 1.25, {opacity: 0, ease: Power2.easeInOut}, '+=1.75')
 			;
 		};
 		const animationPopup2 = () => {
 			popupTL2
 				.to('.details__popup-2', 1, {opacity: 1, ease: Power2.easeInOut}, '-=1')
-				.to('.details__popup-2', 1, {opacity: 0, ease: Power2.easeInOut}, '+=4');
+				.to('.details__popup-2', 1, {opacity: 0, ease: Power2.easeInOut}, '+=4.5');
 		};
 		function completedAnimation1() {
 			popupTL2.restart().play();
