@@ -241,9 +241,17 @@ var initSwiper = function initSwiper() {
 		    secondsPerIteration = 4,
 		    elements = $("[floating-node-js]");
 
-		for (var i = 0; i < elements.length; i++) {
-			randomFloat(elements[i], positionsPerElement, secondsPerIteration);
-		}
+		var tl = new TimelineMax({
+			repeat: -1,
+			yoyo: true
+			// delay: Math.random() * duration
+		});
+
+		// for (let i = 0; i < elements.length; i++) {
+		// 	randomFloat(elements[i], positionsPerElement, secondsPerIteration);
+		// }
+
+		tl.to(elements, secondsPerIteration, { x: '35', ease: Power1.easeInOut }).to(elements, secondsPerIteration, { x: '-5', ease: Power1.easeInOut });
 
 		function random(min, max) {
 			return min + Math.random() * (max - min);
@@ -256,13 +264,13 @@ var initSwiper = function initSwiper() {
 				// delay: Math.random() * duration
 			});
 
-			for (var _i = 0; _i < positions; _i++) {
-				tl.to(element, duration, {
-					x: random(xMin, xMax),
-					// y: random(yMin, yMax),
-					ease: Power1.easeInOut
-				});
-			}
+			// for (var _i = 0; _i < positions; _i++) {
+			// 	tl.to(element, duration, {
+			// 		x: random(xMin, xMax),
+			// 		// y: random(yMin, yMax),
+			// 		ease: Power1.easeInOut
+			// 	});
+			// }
 
 			return tl;
 		}
