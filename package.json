@@ -53,5 +53,9 @@
     "vinyl-buffer": "^1.0.1",
     "yargs": "^12.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+"resolutions": {
+    "graceful-fs": "4.2.4"
+  }
+
 }
