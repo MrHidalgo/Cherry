@@ -3,6 +3,13 @@
 .setup {
 	padding-top: 150px;
 	padding-bottom: 100px;
+	@include adaptive(1365) {
+		padding-top: 100px;
+		padding-bottom: 75px;
+	}
+	@include adaptive(767) {
+		padding-top: 125px;
+	}
 
 	.c-grid {
 		width: 100%;
@@ -32,6 +39,9 @@
 		@include adaptive(1535) {
 			font-size: 30px;
 		}
+		@include adaptive(1365) {
+			padding-bottom: 75px;
+		}
 		@include adaptive(1279) {
 			font-size: 25px;
 		}
@@ -49,6 +59,9 @@
 		@include adaptive(1535) {
 			font-size: 25px;
 		}
+		@include adaptive(1365) {
+			padding-bottom: 30px;
+		}
 		@include adaptive(1279) {
 			font-size: 22px;
 		}
@@ -64,6 +77,12 @@
 			display: flex;
 			flex-wrap: wrap;
 			padding-bottom: 100px;
+			@include adaptive(1365) {
+				padding-bottom: 75px;
+			}
+			@include adaptive(1365) {
+				padding-bottom: 30px;
+			}
 
 			> div {
 				display: flex;
@@ -71,6 +90,10 @@
 				justify-content: center;
 				width: 100%;
 				max-width: calc(100% / 4);
+				@include adaptive(1365) {
+					max-width: calc(100% / 2);
+					padding-bottom: 20px;
+				}
 			}
 		}
 
@@ -105,6 +128,9 @@
 		margin-right: auto;
 		padding: 0 20px;
 		font-size: 16px;
+		@include adaptive(1365) {
+			margin-bottom: 75px;
+		}
 	}
 
 	&__details {
@@ -112,19 +138,36 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 100%;
+		@include adaptive(1365) {
+			padding-bottom: 20px;
+			margin-bottom: 30px;
+
+			&:not(:last-of-type) {
+				border-bottom: 1px solid #eaeaea;
+			}
+		}
 
 		> div {
 			width: 100%;
 			max-width: calc((100% - 80px) / 3);
+			@include adaptive(1365) {
+				max-width: 100%;
+			}
 		}
 
 		&-wrapper {
 			display: flex;
 			flex-direction: column;
 			padding-bottom: 60px;
+			@include adaptive(1365) {
+				padding-bottom: 35px;
+			}
 
 			.setup__select {
 				margin-bottom: 40px;
+				@include adaptive(1365) {
+					margin-bottom: 10px;
+				}
 			}
 		}
 	}

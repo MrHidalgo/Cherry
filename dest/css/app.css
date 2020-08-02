@@ -2838,7 +2838,22 @@ picture {
   padding-bottom: 100px;
 }
 
-/* line 7, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 3, src/scss/_components/_setup.scss */
+  .setup {
+    padding-top: 100px;
+    padding-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/_setup.scss */
+  .setup {
+    padding-top: 125px;
+  }
+}
+
+/* line 14, src/scss/_components/_setup.scss */
 .setup .c-grid {
   width: 100%;
   max-width: 1070px;
@@ -2848,17 +2863,17 @@ picture {
   margin-right: auto;
 }
 
-/* line 17, src/scss/_components/_setup.scss */
+/* line 24, src/scss/_components/_setup.scss */
 .setup__wrapper-1 {
   display: none;
 }
 
-/* line 22, src/scss/_components/_setup.scss */
+/* line 29, src/scss/_components/_setup.scss */
 .setup__title {
   padding-bottom: 20px;
 }
 
-/* line 26, src/scss/_components/_setup.scss */
+/* line 33, src/scss/_components/_setup.scss */
 .setup__subtitle {
   padding-bottom: 100px;
   font-size: 36px;
@@ -2868,27 +2883,34 @@ picture {
 }
 
 @media screen and (max-width: 1535px) {
-  /* line 26, src/scss/_components/_setup.scss */
+  /* line 33, src/scss/_components/_setup.scss */
   .setup__subtitle {
     font-size: 30px;
   }
 }
 
+@media screen and (max-width: 1365px) {
+  /* line 33, src/scss/_components/_setup.scss */
+  .setup__subtitle {
+    padding-bottom: 75px;
+  }
+}
+
 @media screen and (max-width: 1279px) {
-  /* line 26, src/scss/_components/_setup.scss */
+  /* line 33, src/scss/_components/_setup.scss */
   .setup__subtitle {
     font-size: 25px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 26, src/scss/_components/_setup.scss */
+  /* line 33, src/scss/_components/_setup.scss */
   .setup__subtitle {
     font-size: 22px;
   }
 }
 
-/* line 43, src/scss/_components/_setup.scss */
+/* line 53, src/scss/_components/_setup.scss */
 .setup__heading {
   padding-bottom: 50px;
   font-size: 30px;
@@ -2898,27 +2920,34 @@ picture {
 }
 
 @media screen and (max-width: 1535px) {
-  /* line 43, src/scss/_components/_setup.scss */
+  /* line 53, src/scss/_components/_setup.scss */
   .setup__heading {
     font-size: 25px;
   }
 }
 
+@media screen and (max-width: 1365px) {
+  /* line 53, src/scss/_components/_setup.scss */
+  .setup__heading {
+    padding-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 1279px) {
-  /* line 43, src/scss/_components/_setup.scss */
+  /* line 53, src/scss/_components/_setup.scss */
   .setup__heading {
     font-size: 22px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 43, src/scss/_components/_setup.scss */
+  /* line 53, src/scss/_components/_setup.scss */
   .setup__heading {
     font-size: 18px;
   }
 }
 
-/* line 60, src/scss/_components/_setup.scss */
+/* line 73, src/scss/_components/_setup.scss */
 .setup__checkbox {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2926,7 +2955,7 @@ picture {
   display: flex;
 }
 
-/* line 63, src/scss/_components/_setup.scss */
+/* line 76, src/scss/_components/_setup.scss */
 .setup__checkbox-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2938,7 +2967,21 @@ picture {
   padding-bottom: 100px;
 }
 
-/* line 68, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 76, src/scss/_components/_setup.scss */
+  .setup__checkbox-wrapper {
+    padding-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 76, src/scss/_components/_setup.scss */
+  .setup__checkbox-wrapper {
+    padding-bottom: 30px;
+  }
+}
+
+/* line 87, src/scss/_components/_setup.scss */
 .setup__checkbox-wrapper > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2957,7 +3000,16 @@ picture {
   max-width: calc(100% / 4);
 }
 
-/* line 77, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 87, src/scss/_components/_setup.scss */
+  .setup__checkbox-wrapper > div {
+    max-width: -webkit-calc(100% / 2);
+    max-width: calc(100% / 2);
+    padding-bottom: 20px;
+  }
+}
+
+/* line 100, src/scss/_components/_setup.scss */
 .setup__checkbox label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2969,21 +3021,21 @@ picture {
           align-items: center;
 }
 
-/* line 81, src/scss/_components/_setup.scss */
+/* line 104, src/scss/_components/_setup.scss */
 .setup__checkbox label input {
   width: 18px;
   height: 18px;
   margin-right: 10px;
 }
 
-/* line 87, src/scss/_components/_setup.scss */
+/* line 110, src/scss/_components/_setup.scss */
 .setup__checkbox label span {
   font-size: 20px;
   font-weight: 500;
   color: #333131;
 }
 
-/* line 95, src/scss/_components/_setup.scss */
+/* line 118, src/scss/_components/_setup.scss */
 .setup__select {
   outline: none;
   position: relative;
@@ -3003,7 +3055,14 @@ picture {
   font-size: 16px;
 }
 
-/* line 110, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 118, src/scss/_components/_setup.scss */
+  .setup__select {
+    margin-bottom: 75px;
+  }
+}
+
+/* line 136, src/scss/_components/_setup.scss */
 .setup__details {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3019,14 +3078,33 @@ picture {
   width: 100%;
 }
 
-/* line 116, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 136, src/scss/_components/_setup.scss */
+  .setup__details {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  /* line 145, src/scss/_components/_setup.scss */
+  .setup__details:not(:last-of-type) {
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+
+/* line 150, src/scss/_components/_setup.scss */
 .setup__details > div {
   width: 100%;
   max-width: -webkit-calc((100% - 80px) / 3);
   max-width: calc((100% - 80px) / 3);
 }
 
-/* line 121, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 150, src/scss/_components/_setup.scss */
+  .setup__details > div {
+    max-width: 100%;
+  }
+}
+
+/* line 158, src/scss/_components/_setup.scss */
 .setup__details-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3040,12 +3118,26 @@ picture {
   padding-bottom: 60px;
 }
 
-/* line 126, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 158, src/scss/_components/_setup.scss */
+  .setup__details-wrapper {
+    padding-bottom: 35px;
+  }
+}
+
+/* line 166, src/scss/_components/_setup.scss */
 .setup__details-wrapper .setup__select {
   margin-bottom: 40px;
 }
 
-/* line 132, src/scss/_components/_setup.scss */
+@media screen and (max-width: 1365px) {
+  /* line 166, src/scss/_components/_setup.scss */
+  .setup__details-wrapper .setup__select {
+    margin-bottom: 10px;
+  }
+}
+
+/* line 175, src/scss/_components/_setup.scss */
 .setup__btn {
   cursor: pointer;
   overflow: hidden;
@@ -3082,14 +3174,14 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 132, src/scss/_components/_setup.scss */
+  /* line 175, src/scss/_components/_setup.scss */
   .setup__btn {
     height: 66px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 132, src/scss/_components/_setup.scss */
+  /* line 175, src/scss/_components/_setup.scss */
   .setup__btn {
     max-width: 100%;
     height: 56px;
@@ -3101,7 +3193,7 @@ picture {
   }
 }
 
-/* line 161, src/scss/_components/_setup.scss */
+/* line 204, src/scss/_components/_setup.scss */
 .setup__btn:before, .setup__btn:after {
   content: '';
   z-index: 0;
@@ -3115,17 +3207,17 @@ picture {
   transition: width 0.3s ease-in-out;
 }
 
-/* line 173, src/scss/_components/_setup.scss */
+/* line 216, src/scss/_components/_setup.scss */
 .setup__btn:before {
   left: 50%;
 }
 
-/* line 176, src/scss/_components/_setup.scss */
+/* line 219, src/scss/_components/_setup.scss */
 .setup__btn:after {
   right: 50%;
 }
 
-/* line 180, src/scss/_components/_setup.scss */
+/* line 223, src/scss/_components/_setup.scss */
 .setup__btn:hover {
   -webkit-transform: translateY(-3px);
       -ms-transform: translateY(-3px);
@@ -3139,7 +3231,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 185, src/scss/_components/_setup.scss */
+/* line 228, src/scss/_components/_setup.scss */
 .setup__btn:hover:before, .setup__btn:hover:after {
   width: 50%;
   -webkit-transition: width 0.3s ease-in-out;
@@ -3147,7 +3239,7 @@ picture {
   transition: width 0.3s ease-in-out;
 }
 
-/* line 192, src/scss/_components/_setup.scss */
+/* line 235, src/scss/_components/_setup.scss */
 .setup__btn span {
   z-index: 2;
   position: relative;
@@ -3157,7 +3249,7 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 192, src/scss/_components/_setup.scss */
+  /* line 235, src/scss/_components/_setup.scss */
   .setup__btn span {
     font-size: 23px;
   }
