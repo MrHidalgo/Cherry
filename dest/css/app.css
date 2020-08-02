@@ -1480,14 +1480,14 @@ picture {
   left: -30px;
   width: 100%;
   max-width: 500px;
-  height: 510px;
+  height: 500px;
 }
 
 @media screen and (max-width: 1535px) {
   /* line 52, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     max-width: 360px;
-    height: 370px;
+    height: 360px;
   }
 }
 
@@ -1495,7 +1495,7 @@ picture {
   /* line 52, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     max-width: 370px;
-    height: 380px;
+    height: 370px;
   }
 }
 
@@ -1503,7 +1503,7 @@ picture {
   /* line 52, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     max-width: 350px;
-    height: 360px;
+    height: 350px;
   }
 }
 
@@ -1511,7 +1511,7 @@ picture {
   /* line 52, src/scss/_components/_main.scss */
   .main__wrapper-left > div {
     max-width: 300px;
-    height: 307px;
+    height: 300px;
   }
 }
 
@@ -1547,7 +1547,7 @@ picture {
   z-index: 3;
   top: 0;
   left: -80px;
-  max-width: 90%;
+  max-width: 88%;
 }
 
 @media screen and (max-width: 1535px) {

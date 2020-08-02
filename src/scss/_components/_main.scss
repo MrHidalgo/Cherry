@@ -54,22 +54,22 @@
 				left: -30px;
 				width: 100%;
 				max-width: 500px;
-				height: 510px;
+				height: 500px;
 				@include adaptive(1535) {
 					max-width: 360px;
-					height: 370px;
+					height: 360px;
 				}
 				@include adaptive(1365) {
 					max-width: 370px;
-					height: 380px;
+					height: 370px;
 				}
 				@include adaptive(1279) {
 					max-width: 350px;
-					height: 360px;
+					height: 350px;
 				}
 				@include adaptive(1023) {
 					max-width: 300px;
-					height: 307px;
+					height: 300px;
 				}
 				@include adaptive(767) {
 					left: auto;
@@ -93,7 +93,7 @@
 					z-index: 3;
 					top: 0;
 					left: -80px;
-					max-width: 90%;
+					max-width: 88%;
 					@include adaptive(1535) {
 						left: -25px;
 					}

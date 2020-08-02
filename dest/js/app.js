@@ -107,10 +107,13 @@ var initSmoothScroll = function initSmoothScroll() {
 
 
 	$(btnName).on("click", function (e) {
-
 		var linkHref = $(e.currentTarget).attr('href'),
 		    headerHeight = $(".header").outerHeight() || 0,
 		    topHeightOffset = $(linkHref).offset().top;
+
+		if ($(window).width() < 768 && $(e.currentTarget).closest('.header').length) {
+			$('.header__close').trigger('click');
+		}
 
 		$('body, html').animate({
 			scrollTop: topHeightOffset
