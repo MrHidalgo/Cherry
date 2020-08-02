@@ -52,14 +52,14 @@
 
 		&-img {
 			position: absolute;
-			max-width: 125px;
+			max-width: 100px;
 			height: auto;
 			transform: scale(0.9);
 			@include adaptive(1023) {
 				transform: scale(0.8);
 			}
 			@include adaptive(767) {
-				transform: scale(0.75);
+				transform: scale(0.7);
 			}
 
 			&-1 {
