@@ -3,4 +3,7 @@ ProjectTitle: Cherry
 PageList:
 - file: index.html
   titleName: Home
-  ready: 1
+  ready: 100
+- file: details.html
+  titleName: Details
+  ready: 100

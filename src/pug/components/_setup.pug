@@ -1,0 +1,63 @@
+// SECTION :: START
+
+section#setup.setup
+	.c-grid
+
+		p.setup__title.c-title Cherry Early Adaptor Survey
+		p.setup__subtitle Please let us know little more about your payment habits.
+
+		form(action='' method='' autocomplete='off')
+			.setup__wrapper.setup__wrapper-0
+
+				p.setup__heading How many payment cards do you have?
+
+				select.setup__select(name='' select-card-js)
+					option(value='0' selected) Select...
+					option(value='1') 1
+					option(value='2') 2
+					option(value='3') 3
+					option(value='4') 4
+					option(value='5') 5
+					option(value='6') 6
+					option(value='7') 7
+					option(value='8') 8
+					option(value='9') 9
+					option(value='10') 10
+
+			.setup__wrapper.setup__wrapper-1(select-details-js)
+
+				p.setup__heading Awesome, thank you. Tell us little more
+
+				.setup__details-wrapper(select-wrapper-js)
+
+
+			.setup__wrapper.setup__wrapper-2
+
+				p.setup__heading Do you use any of the these payment menthods?
+
+				.setup__checkbox-wrapper
+					div
+						.setup__checkbox
+							label
+								input(type='checkbox')
+								span PayPal
+					div
+						.setup__checkbox
+							label
+								input(type='checkbox')
+								span Affirm
+					div
+						.setup__checkbox
+							label
+								input(type='checkbox')
+								span AfterPay
+					div
+						.setup__checkbox
+							label
+								input(type='checkbox')
+								span Stripe
+
+			button.setup__btn(type='submit')
+				span Submit
+
+// SECTION :: END

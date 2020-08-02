@@ -2,34 +2,6 @@
 	/*
 	* CALLBACK :: start
 	* ============================================= */
-	const paymentsRandomView = () => {
-		function randowView(setTimeVal) {
-			setTimeout(() => {
-				const _num1 = Math.floor(Math.random() * 10),
-					_num2 = Math.floor(Math.random() * 10),
-					_num3 = Math.floor(Math.random() * 10);
-
-				const paymentsImg = $('.payments__logo img');
-
-				$(paymentsImg[_num1]).fadeIn(750);
-				$(paymentsImg[_num2]).fadeIn(750);
-				$(paymentsImg[_num3]).fadeIn(750);
-
-				setTimeout(() => {
-					$('.payments__logo img').fadeOut(750);
-				}, setTimeVal);
-			}, 100);
-		}
-
-		randowView(4000);
-
-		let timerId = setInterval(() => {
-			randowView(3500);
-
-		}, 5500);
-	};
-
-
 	const viewPortAnimation = () => {
 		const popupTL1 = new TimelineMax({
 				paused: true,
@@ -85,64 +57,76 @@
 			animatedClassName: 'animated',
 		});
 
-		document.querySelector('.details__animation-bg').addEventListener('animationend', (ev) => {
-			setTimeout(() => {
-				popupTL1.restart().play();
-			}, 500);
-		});
+		if(document.querySelector('.details__animation-bg')) {
+			document.querySelector('.details__animation-bg').addEventListener('animationend', (ev) => {
+				setTimeout(() => {
+					popupTL1.restart().play();
+				}, 500);
+			});
 
-		document.addEventListener('aos:out', () => {
-			popupTL1.restart().kill();
-			popupTL2.restart().kill();
-		});
+			document.addEventListener('aos:out', () => {
+				popupTL1.restart().kill();
+				popupTL2.restart().kill();
+			});
+		}
 	};
 
 
 	const initPathFloatingAnimation = () => {
-		let xMin = -5,
-			xMax = 40,
-			yMin = 0,
-			yMax = 5,
-			positionsPerElement = 5,
-			secondsPerIteration = 4,
+		let secondsPerIteration = 4,
 			elements = $("[floating-node-js]");
 
-		var tl = new TimelineMax({
+		const tl = new TimelineMax({
 			repeat: -1,
 			yoyo: true,
-			// delay: Math.random() * duration
 		});
-
-		// for (let i = 0; i < elements.length; i++) {
-		// 	randomFloat(elements[i], positionsPerElement, secondsPerIteration);
-		// }
 
 		tl
 			.to(elements, secondsPerIteration, {x: '35', ease: Power1.easeInOut})
 			.to(elements, secondsPerIteration, {x: '-5', ease: Power1.easeInOut})
 		;
+	};
 
-		function random(min, max) {
-			return min + Math.random() * (max - min);
-		}
 
-		function randomFloat(element, positions, duration) {
-			var tl = new TimelineMax({
-				repeat: -1,
-				yoyo: true,
-				// delay: Math.random() * duration
-			});
+	const selectCard = () => {
+		const selectTMPL = `
+		<div class="setup__details">
+			<div>
+				<select class="setup__select" name="">
+					<option value="0" selected="selected">Card Type</option>
+					<option value="1">Card Type</option>
+					<option value="2">Card Type</option>
+					<option value="3">Card Type</option>
+				</select>
+			</div>
+			<div>
+				<select class="setup__select" name="">
+					<option value="0" selected="selected">Bank/Issuer</option>
+					<option value="1">Bank/Issuer</option>
+					<option value="2">Bank/Issuer</option>
+					<option value="2">Bank/Issuer</option>
+				</select>
+			</div>
+			<div>
+				<select class="setup__select" name="">
+					<option value="0" selected="selected">Card Network</option>
+					<option value="1">Card Network</option>
+					<option value="2">Card Network</option>
+					<option value="3">Card Network</option>
+				</select>
+			</div>
+		</div>
+		`;
 
-			// for (var _i = 0; _i < positions; _i++) {
-			// 	tl.to(element, duration, {
-			// 		x: random(xMin, xMax),
-			// 		// y: random(yMin, yMax),
-			// 		ease: Power1.easeInOut
-			// 	});
-			// }
+		$('[select-card-js]').change((ev) => {
+			const val = $(ev.currentTarget).val();
 
-			return tl;
-		}
+			(val > 0) ? $('[select-details-js]').fadeIn(550) : $('[select-details-js]').fadeOut(550);
+
+			$('[select-wrapper-js] *').remove();
+
+			for(let idx = 0; idx < val; idx++) $('[select-wrapper-js]').append(selectTMPL)
+		});
 	};
 	/*
 	* CALLBACK :: end
@@ -167,9 +151,9 @@
 		// ==========================================
 
 		// callback
-		// paymentsRandomView();
 		viewPortAnimation();
 		initPathFloatingAnimation();
+		selectCard();
 		// ==========================================
 	};
 

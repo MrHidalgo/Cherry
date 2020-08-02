@@ -147,32 +147,6 @@ var initSwiper = function initSwiper() {
 	/*
  * CALLBACK :: start
  * ============================================= */
-	var paymentsRandomView = function paymentsRandomView() {
-		function randowView(setTimeVal) {
-			setTimeout(function () {
-				var _num1 = Math.floor(Math.random() * 10),
-				    _num2 = Math.floor(Math.random() * 10),
-				    _num3 = Math.floor(Math.random() * 10);
-
-				var paymentsImg = $('.payments__logo img');
-
-				$(paymentsImg[_num1]).fadeIn(750);
-				$(paymentsImg[_num2]).fadeIn(750);
-				$(paymentsImg[_num3]).fadeIn(750);
-
-				setTimeout(function () {
-					$('.payments__logo img').fadeOut(750);
-				}, setTimeVal);
-			}, 100);
-		}
-
-		randowView(4000);
-
-		var timerId = setInterval(function () {
-			randowView(3500);
-		}, 5500);
-	};
-
 	var viewPortAnimation = function viewPortAnimation() {
 		var popupTL1 = new TimelineMax({
 			paused: true,
@@ -222,60 +196,46 @@ var initSwiper = function initSwiper() {
 			animatedClassName: 'animated'
 		});
 
-		document.querySelector('.details__animation-bg').addEventListener('animationend', function (ev) {
-			setTimeout(function () {
-				popupTL1.restart().play();
-			}, 500);
-		});
+		if (document.querySelector('.details__animation-bg')) {
+			document.querySelector('.details__animation-bg').addEventListener('animationend', function (ev) {
+				setTimeout(function () {
+					popupTL1.restart().play();
+				}, 500);
+			});
 
-		document.addEventListener('aos:out', function () {
-			popupTL1.restart().kill();
-			popupTL2.restart().kill();
-		});
+			document.addEventListener('aos:out', function () {
+				popupTL1.restart().kill();
+				popupTL2.restart().kill();
+			});
+		}
 	};
 
 	var initPathFloatingAnimation = function initPathFloatingAnimation() {
-		var xMin = -5,
-		    xMax = 40,
-		    yMin = 0,
-		    yMax = 5,
-		    positionsPerElement = 5,
-		    secondsPerIteration = 4,
+		var secondsPerIteration = 4,
 		    elements = $("[floating-node-js]");
 
 		var tl = new TimelineMax({
 			repeat: -1,
 			yoyo: true
-			// delay: Math.random() * duration
 		});
 
-		// for (let i = 0; i < elements.length; i++) {
-		// 	randomFloat(elements[i], positionsPerElement, secondsPerIteration);
-		// }
-
 		tl.to(elements, secondsPerIteration, { x: '35', ease: Power1.easeInOut }).to(elements, secondsPerIteration, { x: '-5', ease: Power1.easeInOut });
+	};
 
-		function random(min, max) {
-			return min + Math.random() * (max - min);
-		}
+	var selectCard = function selectCard() {
+		var selectTMPL = "\n\t\t<div class=\"setup__details\">\n\t\t\t<div>\n\t\t\t\t<select class=\"setup__select\" name=\"\">\n\t\t\t\t\t<option value=\"0\" selected=\"selected\">Card Type</option>\n\t\t\t\t\t<option value=\"1\">Card Type</option>\n\t\t\t\t\t<option value=\"2\">Card Type</option>\n\t\t\t\t\t<option value=\"3\">Card Type</option>\n\t\t\t\t</select>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<select class=\"setup__select\" name=\"\">\n\t\t\t\t\t<option value=\"0\" selected=\"selected\">Bank/Issuer</option>\n\t\t\t\t\t<option value=\"1\">Bank/Issuer</option>\n\t\t\t\t\t<option value=\"2\">Bank/Issuer</option>\n\t\t\t\t\t<option value=\"2\">Bank/Issuer</option>\n\t\t\t\t</select>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<select class=\"setup__select\" name=\"\">\n\t\t\t\t\t<option value=\"0\" selected=\"selected\">Card Network</option>\n\t\t\t\t\t<option value=\"1\">Card Network</option>\n\t\t\t\t\t<option value=\"2\">Card Network</option>\n\t\t\t\t\t<option value=\"3\">Card Network</option>\n\t\t\t\t</select>\n\t\t\t</div>\n\t\t</div>\n\t\t";
 
-		function randomFloat(element, positions, duration) {
-			var tl = new TimelineMax({
-				repeat: -1,
-				yoyo: true
-				// delay: Math.random() * duration
-			});
+		$('[select-card-js]').change(function (ev) {
+			var val = $(ev.currentTarget).val();
 
-			// for (var _i = 0; _i < positions; _i++) {
-			// 	tl.to(element, duration, {
-			// 		x: random(xMin, xMax),
-			// 		// y: random(yMin, yMax),
-			// 		ease: Power1.easeInOut
-			// 	});
-			// }
+			val > 0 ? $('[select-details-js]').fadeIn(550) : $('[select-details-js]').fadeOut(550);
 
-			return tl;
-		}
+			$('[select-wrapper-js] *').remove();
+
+			for (var idx = 0; idx < val; idx++) {
+				$('[select-wrapper-js]').append(selectTMPL);
+			}
+		});
 	};
 	/*
  * CALLBACK :: end
@@ -299,9 +259,9 @@ var initSwiper = function initSwiper() {
 		// ==========================================
 
 		// callback
-		// paymentsRandomView();
 		viewPortAnimation();
 		initPathFloatingAnimation();
+		selectCard();
 		// ==========================================
 	};
 
