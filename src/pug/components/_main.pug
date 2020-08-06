@@ -16,9 +16,9 @@ section#main.main
 				h1.main__title.c-title Earn premium rewards on every checkout.
 				p.main__desc!= "Have more than one card in your wallet? We will negotiate and find the best rewards when you checkout."
 
-				form.footer__form(action='' method='' autocomplete='off')
+				form#mainForm.footer__form(action='' method='' autocomplete='off')
 					input(type='email' name='' placeholder='Email' required)
-					button(type='button' data-mfp-src='#congratModal' data-effect='mfp-zoom-in' popup-js)
+					button(type='submit' data-mfp-src='#congratModal' data-effect='mfp-zoom-in' popup-thx-js)
 						span Get Early Access
 
 				p.main__info Join the waiting list to get early access.

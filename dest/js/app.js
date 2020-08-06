@@ -58,7 +58,7 @@ var initHamburger = function initHamburger() {
  */
 var initPopups = function initPopups() {
 
-	$('[popup-js]').magnificPopup({
+	var magnificPopupOpt = {
 		type: 'inline',
 		fixedContentPos: true,
 		fixedBgPos: true,
@@ -73,6 +73,17 @@ var initPopups = function initPopups() {
 				this.st.mainClass = this.st.el.attr('data-effect');
 			},
 			close: function close() {}
+		}
+	};
+
+	$('[popup-js]').magnificPopup(magnificPopupOpt);
+
+	$('[popup-thx-js]').on('click', function (ev) {
+		if ($('#mainForm').is(":valid")) {
+			console.log("valid -> added Ajax request");
+			$('[popup-thx-js]').magnificPopup(magnificPopupOpt);
+			$('[popup-thx-js]').magnificPopup('open');
+			ev.preventDefault();
 		}
 	});
 };
