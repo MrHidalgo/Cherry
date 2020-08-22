@@ -2,13 +2,29 @@
 
 .header {
 	z-index: 1000;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	box-shadow: 0 2px 5px 0 rgba(#000, 0);
 	background-color: transparent;
 	@include transition(box-shadow, background-color);
+
+	&.header--fixed {
+		background-color: rgba(#fff, 0.975);
+		box-shadow: 0 2px 5px 0 rgba(#000, 0.1);
+		@include transition(box-shadow, background-color);
+
+		.header {
+			&__wrapper {
+				height: 90px;
+				@include transition(height);
+				@include adaptive(767) {
+					height: 75px;
+				}
+			}
+		}
+	}
 
 	&__wrapper {
 		display: flex;
@@ -17,6 +33,7 @@
 		height: 140px;
 		padding-left: 73px;
 		padding-right: 73px;
+		@include transition(height);
 		@include adaptive(1439) {
 			height: 120px;
 			padding-left: 30px;
@@ -54,7 +71,7 @@
 				width: 100%;
 				height: 100%;
 				padding: 50px;
-				background-color: rgba(#fff, 0.95);
+				background-color: rgba(#fff, 1);
 				@include transition(opacity, visibility);
 
 				&.is-open {
@@ -68,7 +85,7 @@
 
 	&__close {
 		position: absolute;
-		top: 35px;
+		top: 21px;
 		right: 15px;
 		display: none;
 		align-items: center;
@@ -135,6 +152,73 @@
 				&:after {
 					width: 50%;
 					@include transition(width);
+				}
+			}
+		}
+
+		&-btn {
+			cursor: pointer;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: auto;
+			height: 56px;
+			padding-left: 30px;
+			padding-right: 30px;
+			border: none;
+			border-radius: 5px;
+			background-color: rgb(248, 115, 7);
+			box-shadow: 0 3px 0 0 rgba(#000, 0);
+			@include transition(box-shadow, transform);
+			@include adaptive(1023) {
+				height: 46px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			@include adaptive(767) {
+				margin-top: 15px;
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				z-index: 0;
+				position: absolute;
+				top: 0;
+				width: 0;
+				height: 100%;
+				background-color: darken(rgb(248, 115, 7), 2%);
+				@include transition(width);
+			}
+
+			&:before {
+				left: 50%;
+			}
+			&:after {
+				right: 50%;
+			}
+
+			&:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 3px 0 0 rgba(#000, 0.15);
+				@include transition(box-shadow, transform);
+
+				&:before,
+				&:after {
+					width: 50%;
+					@include transition(width);
+				}
+			}
+
+			span {
+				z-index: 2;
+				position: relative;
+				color: #ffffff;
+				font-size: 23px;
+				font-weight: 600;
+				@include adaptive(1023) {
+					font-size: 20px;
 				}
 			}
 		}
